@@ -31,15 +31,15 @@
 .success p {
     color: #047857;
 }
-.neutral {
+.info {
     background-color: #DBEAFE;
 }
 
-.neutral .banner-head {
+.info .banner-head {
     color: #1E40AF;
 }
 
-.neutral p {
+.info p {
     color: #1C51B9;
 }
 

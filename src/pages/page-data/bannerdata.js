@@ -9,7 +9,7 @@ const bannerData =  [
     {
         key: "mn",
         variant: "multi",
-        bannerType: "neutral",
+        bannerType: "info",
         head: "Info",
         text: "Example multi line information banner"
     },
@@ -37,7 +37,7 @@ const bannerData =  [
     {
         key: "sn",
         variant: "single",
-        bannerType: "neutral",
+        bannerType: "info",
         head: "Info",
         text: "Example single line information banner"
     },
@@ -60,7 +60,7 @@ const bannerData =  [
 const playgroundCode = `
         <Banner 
             variant="multi" 
-            bannerType="neutral" 
+            bannerType="info" 
             style={{backgroundColor: "black"}} 
             headStyle={{color: "red"}} 
             textStyle={{color: "purple"}}
@@ -96,7 +96,7 @@ const basicCode = (exampleVariant, exampleBannerType) => {
 
 const advancedCode = `
         <Banner variant="multi" 
-                bannerType="neutral" 
+                bannerType="info" 
                 style={{color: "black"}} 
                 headStyle={{color: "red"}} 
                 textStyle={{color: "purple"}}

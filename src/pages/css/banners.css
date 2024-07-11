@@ -43,22 +43,22 @@
 }
 
 .example-banner-container > .example-container > .multi-success {grid-area: s-multi;}
-.example-banner-container > .example-container > .multi-neutral {grid-area: i-multi;}
+.example-banner-container > .example-container > .multi-info {grid-area: i-multi;}
 .example-banner-container > .example-container > .multi-attention {grid-area: a-multi;}
 .example-banner-container > .example-container > .multi-error {grid-area: e-multi;}
 .example-banner-container > .example-container > .single-success {grid-area: s-single;}
-.example-banner-container > .example-container > .single-neutral {grid-area: i-single;}
+.example-banner-container > .example-container > .single-info {grid-area: i-single;}
 .example-banner-container > .example-container > .single-attention {grid-area: a-single;}
 .example-banner-container > .example-container > .single-error {grid-area: e-single;}
 
-.example-banner-container > .example-container > .example {display: flex; justify-content: center;}
-.example-banner-container > .example-container > .heading {place-self: center;}
+.example-banner-container > .example-container > .example {place-self: start;}
+.example-banner-container > .example-container > .heading {place-self: start;}
 
 .example-banner-container > .example-container > .multi1.heading { grid-area: multi;}
 .example-banner-container > .example-container > .single1.heading { grid-area: single;}
 
 .example-banner-container > .example-container > .success-text { grid-area: success;}
-.example-banner-container > .example-container > .neutral-text { grid-area: info;}
+.example-banner-container > .example-container > .info-text { grid-area: info;}
 .example-banner-container > .example-container > .attention-text { grid-area: attention;}
 .example-banner-container > .example-container > .error-text { grid-area: error;}
 
@@ -77,16 +77,16 @@
         padding: 0 20px 40px;
         grid-template-columns: 0.5fr 1fr 0.1fr;
         grid-template-areas: 
-        "..... success ....."
+        "success success ....."
         "single s-single ....."
         "multi s-multi ....."
-        "..... info ....."
+        "info info ....."
         "single2 i-single ....."
         "multi2 i-multi ....."
-        "..... attention ....."
+        "attention attention ....."
         "single3 a-single ....."
         "multi3 a-multi ....."
-        "..... error ....."
+        "error error ....."
         "single4 e-single ....."
         "multi4 e-multi .....";
     }
@@ -102,6 +102,6 @@
     .example-banner-container > .example-container > .multi2.heading,
     .example-banner-container > .example-container > .multi3.heading,
     .example-banner-container > .example-container > .multi4.heading {
-        place-self:start;
+        place-self:center;
     }
 }

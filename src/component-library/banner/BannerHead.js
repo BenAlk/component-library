@@ -12,7 +12,7 @@ const imageMap = {
     success: successImage,
     error: errorImage,
     attention: attentionImage,
-    neutral: neutralImage
+    info: neutralImage
 }
 
 
