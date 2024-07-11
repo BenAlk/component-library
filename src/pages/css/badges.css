@@ -1,0 +1,250 @@
+
+.example-badge-container {
+    max-width: 1400px;
+}
+
+.example-badge-container h2 {
+    font-size: 1rem;
+}
+
+.example-badge-container h2 span {
+    color: #68bbdb;
+    font-size: 1.25rem;
+}
+
+.example-badge-container > .example-container {
+    display: grid;
+    grid-template-columns: 0.25fr repeat(9, 1fr) 0.5fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "..... ..... gray red yellow green blue indigo purple pink ....."
+    "..... square gray-square red-square yellow-square green-square blue-square indigo-square purple-square pink-square ....."
+    "..... pill gray-pill red-pill yellow-pill green-pill blue-pill indigo-pill purple-pill pink-pill .....";
+    gap: 5px;
+    place-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.example-badge-container > .example-container > .example,
+.example-badge-container > .example-container > .heading {
+    width: 100%;
+}
+
+.example-badge-container > .example-container > .heading {
+    font-size: 0.8rem;
+    color: #68bbdb;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #68bbdb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.example-badge-container > .example-container > .heading:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+}
+
+.example-badge-container > .example-container > .gray-square {grid-area: gray-square;}
+
+.example-badge-container > .example-container > .red-square{grid-area: red-square;}
+
+.example-badge-container > .example-container > .yellow-square {grid-area: yellow-square;}
+
+.example-badge-container > .example-container > .green-square {grid-area: green-square;}
+
+.example-badge-container > .example-container > .blue-square{grid-area: blue-square;}
+
+.example-badge-container > .example-container > .indigo-square {grid-area: indigo-square;}
+
+.example-badge-container > .example-container > .purple-square {grid-area: purple-square;}
+
+.example-badge-container > .example-container > .pink-square{grid-area: pink-square;}
+
+.example-badge-container > .example-container > .gray-pill {grid-area: gray-pill;}
+
+.example-badge-container > .example-container > .red-pill{grid-area: red-pill;}
+
+.example-badge-container > .example-container > .yellow-pill {grid-area: yellow-pill;}
+
+.example-badge-container > .example-container > .green-pill {grid-area: green-pill;}
+
+.example-badge-container > .example-container > .blue-pill{grid-area: blue-pill;}
+
+.example-badge-container > .example-container > .indigo-pill {grid-area: indigo-pill;}
+
+.example-badge-container > .example-container > .purple-pill {grid-area: purple-pill;}
+
+.example-badge-container > .example-container > .pink-pill{grid-area: pink-pill;}
+
+.example-badge-container > .example-container > .gray-text{grid-area: gray;}
+.example-badge-container > .example-container > .red-text{grid-area: red;}
+.example-badge-container > .example-container > .yellow-text{grid-area: yellow;}
+.example-badge-container > .example-container > .green-text{grid-area: green;}
+.example-badge-container > .example-container > .blue-text{grid-area: blue;}
+.example-badge-container > .example-container > .indigo-text{grid-area: indigo;}
+.example-badge-container > .example-container > .purple-text{grid-area: purple;}
+.example-badge-container > .example-container > .pink-text{grid-area: pink;}
+
+.example-badge-container > .example-container > .square{grid-area: square;}
+.example-badge-container > .example-container > .pill{grid-area: pill;}
+.example-badge-container > .example-container > .squaresquare {display: none;}
+.example-badge-container > .example-container > .pillpill {display: none;}
+
+.basic-code, .advanced-code, .import-code {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.25fr 1fr 0.5fr;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+.import-code {
+    grid-template-areas: 
+    ".... text .... code ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.basic-code {
+    grid-template-areas: 
+    ".... code .... text ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.advanced-code {
+    grid-template-areas: 
+    ".... text .... code ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.playground-code {
+    padding-bottom: 20px;
+}
+
+.basic-code-text h2, .advanced-code-text h2, .import-code-text h2, .playground-code h2 {
+    color: #68bbdb;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.advanced-code-text p span {
+    color: #68bbdb;
+}
+
+.basic-code-text, .advanced-code-text, .import-code-text {
+    grid-area: text;
+}
+
+.playground-code-text{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.basic-code-visual, .advanced-code-visual, .import-code-visual {
+    grid-area: code;
+}
+
+.import-code-visual {
+    padding-top: 25px;
+}
+
+@media (max-width: 1150px) {
+    .import-code-visual {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .advanced-code-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 850px) {
+    
+
+    .example-intro h1, .basic-code-text h2, .advanced-code-text h2, .import-code-text h2, .playground-code h2  {
+        font-size: 0.8rem;
+    }
+
+    .example-badge-container {
+        max-width: 600px;
+    }
+
+    .advanced-code-text p, .basic-code-text p, .import-code-text p, .playground-code-text p {
+        font-size: 0.8rem;
+    }
+
+    .advanced-code-visual, .basic-code-visual, .playground-code-visual {
+        font-size: 0.6rem;
+    }
+
+    .import-code-visual {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 675px) {
+    .example-badge-container > .example-container {
+        padding: 0 20px 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "..... square pill pillpill squaresquare ......"
+        "gray gray-square gray-pill red-pill red-square red"
+        "yellow yellow-square yellow-pill green-pill green-square green"
+        "blue blue-square blue-pill indigo-pill indigo-square indigo"
+        "purple purple-square purple-pill pink-pill pink-square pink";
+    }
+    .example-badge-container > .example-container > .squaresquare {display:block; grid-area: squaresquare;}
+    .example-badge-container > .example-container > .pillpill {display: block; grid-area: pillpill;}
+
+    
+    .advanced-code {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas: 
+        ".... text text ...."
+        ".... code code ....";
+    }
+
+    .advanced-code-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 475px) {
+    .example-badge-container > .example-container {
+        padding: 0 20px 40px;
+        grid-template-columns: 0.25fr 1fr 1fr 1fr 0.25fr;
+        gap: 10px;
+        grid-template-areas: 
+        "..... ..... square pill  ......"
+        "..... gray gray-square gray-pill ....."
+        "..... red red-pill red-square ....."
+        "..... yellow yellow-square yellow-pill ....." 
+        "..... green green-pill green-square ....."
+        "..... blue blue-square blue-pill ....." 
+        "..... indigo indigo-pill indigo-square ....."
+        "..... purple purple-square purple-pill ....."
+        "......pink pink-pill pink-square .....";
+    }
+    .example-badge-container > .example-container > .squaresquare {display:none;}
+    .example-badge-container > .example-container > .pillpill {display: none;}
+
+    .import-code, .basic-code, .advanced-code, .playground-code {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas: 
+        ".... text text ...."
+        ".... code code ....";
+    }
+
+    .import-code-text, .basic-code-text, .advanced-code-text {
+        text-align: center;
+    }
+
+    .playground-code-text {
+        grid-area: text;
+    }
+
+    .playground-code-visual{
+        grid-area: code;
+    }
+}

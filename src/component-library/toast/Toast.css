@@ -1,0 +1,139 @@
+/* Toast Styles */
+
+/* Info */
+.toast.toast-info {
+    background-color: #EFF6FF;
+    font-size: 0.875rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+.toast.toast-info .toast-title {
+    color: #1E40AF;
+    font-weight: 500;
+}
+
+.toast.toast-info .toast-text {
+    color: #1C51B9;
+    font-weight: 400;
+}
+
+
+
+/* Success */
+.toast.toast-success {
+    background-color: #ECFDF5;
+    font-size: 0.875rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+.toast.toast-success .toast-title {
+    font-weight: 500;
+    color:#065F46;
+}
+
+.toast.toast-success .toast-text {
+    font-weight: 400;
+    color:#047857;
+}
+
+
+
+/* Warning */
+.toast.toast-warning {
+    background-color: #FFFBEB;
+    font-size: 0.875rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+.toast.toast-warning .toast-title {
+    font-weight: 500;
+    color:#92400E;
+}
+
+.toast.toast-warning .toast-text {
+    font-weight: 400;
+    color:#B45309;
+}
+
+
+
+/* Error */
+.toast.toast-error {
+    background-color: #FEF2F2;
+    font-size: 0.875rem;
+    animation: slideDown 0.5s ease-out;
+}
+
+.toast.toast-error .toast-title {
+    font-weight: 500;
+    color:#92400E;
+}
+
+.toast.toast-error .toast-text {
+    font-weight: 400;
+    color:#B45309;
+}
+
+
+
+
+
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
+}
+
+.toast {
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 36px 1fr 50px;    
+    grid-template-areas: 
+        "icon title close"
+        ".... text ....";
+
+}
+
+.toast-icon {
+    grid-area: icon;
+    padding-left: 5px;
+}
+
+.toast-title {
+    grid-area: title;
+}
+
+.toast-text {
+    grid-area: text;
+}
+
+.toast-close {
+    grid-area: close;
+    display: flex;
+    justify-content: end;
+    text-align: center;
+    background: none;
+    border: none;
+    color: rgba(170, 175, 180, 0.342);
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    padding-left: 4px;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

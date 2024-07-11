@@ -1,0 +1,164 @@
+.welcome-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    ".... intro intro intro intro ...."
+    ".... image1 image1 list1 list1 ...."
+    ".... list2 list2 image2 image2 ...."
+    ".... links links links links ....";
+}
+
+.welcome-container h2 {
+    font-size: 1rem;
+}
+
+.welcome-container .list1 {
+    grid-area: list1;
+}
+
+.welcome-container .list2 {
+    grid-area: list2;
+}
+
+.welcome-container p {
+    font-size: 1.125rem;
+}
+
+.welcome-container .inline-image-1, .welcome-container .inline-image-2 {
+    width: 450px;
+    align-self: center;
+    -webkit-mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%); /* Adjust gradient shape and transparency stops */
+    mask-image: radial-gradient(ellipse at center, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%); /* For non-webkit browsers */
+    justify-self: center;
+}
+
+.welcome-container .inline-image-1{
+    grid-area: image1;
+}
+
+.welcome-container .inline-image-2 {
+    grid-area: image2;
+}
+
+.welcome-container ul li span {
+    color: #68bbdb;
+    font-weight: 500;
+}
+
+.welcome-link {
+    grid-area: links;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "text text text text text text text"
+    ".... .... arr1 butt arr2 .... ....";
+    align-items: center;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.welcome-link p {
+    grid-area: text;
+    margin-top: 20px;
+}
+
+.welcome-link-button {
+    color: #68bbdb;
+    border: 1px solid #68bbdb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    grid-area: butt;
+}
+
+.welcome-link-button:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+    color: white;
+    border: 1px solid white;
+}
+
+.welcome-link svg {
+    padding-bottom: 30px;
+}
+
+.welcome-link .arr1 {
+    grid-area: arr1;
+    padding-right: 40px;
+}
+
+.welcome-link .arr2{
+    grid-area: arr2;
+    padding-left: 40px;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    .welcome-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "intro"
+        "image1"
+        "list1"
+        "image2"
+        "list2"
+        "links";
+        margin: 40px 40px 0 40px;
+    }
+
+    .welcome-container h2 {
+        text-align: center;
+    }
+
+    .welcome-container ul {
+        list-style-type:none;
+        padding: 0;
+    }
+}
+
+@media (max-width: 500px ) {
+    .welcome-container {
+        margin-top: 20px;
+    }
+    .welcome-container h1{
+        font-size: 1rem;
+    }
+    .welcome-container h2{
+        font-size: 0.75rem;
+    }
+    .welcome-container p{
+        font-size: 0.9rem;
+    }
+    .welcome-container .inline-image-1, .welcome-container .inline-image-2 {
+        width: 250px;
+    }
+    .welcome-link-button {
+        font-size: 0.6rem;
+    }
+
+    .welcome-link {
+        padding-top: 0px;
+    }
+
+    .welcome-link svg {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 400px) {
+    .welcome-container {
+        max-width: 315px;
+        margin: 10px 0 0 0;
+    }
+}
+
+@media(min-width: 1400px) {
+    .welcome-container {
+        max-width: 1400px;
+    }
+}
+

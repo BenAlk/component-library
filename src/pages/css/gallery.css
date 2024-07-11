@@ -1,0 +1,371 @@
+/* Gallery General Styles */
+
+.gallery-container {
+    grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr;
+    grid-template-areas:
+    "..... intro intro intro intro intro intro ....."
+    "..... ..... badge badge badge badge ..... ....."
+    "..... ..... baner baner baner baner ..... ....."
+    "..... ..... cards cards cards cards ..... ....."
+    "..... ..... tests tests tests tests ..... ....."
+    "..... ..... toast toast toast toast ..... ....."
+    "..... ..... toolt toolt toolt toolt ..... ....."
+    "..... outro outro outro outro outro outro .....";
+}
+
+.gallery-container h1 {
+    padding-bottom: 60px;
+    border-bottom: 0.5px solid #d1d3d813;
+    margin-bottom: 0;
+}
+
+.gallery-container h2 {
+    color: #68bbdb;
+}
+
+.gallery-container .gallery-link-button {
+    display: block;
+    width: auto;
+    margin-top: 50px;
+    place-self: center;
+}
+
+.outro {
+    grid-area:outro;
+    text-align: center;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 300;
+    padding:40px 0;
+}
+
+/* Overlapping Component Styles */
+
+.gallery-badges, 
+.gallery-banners, 
+.gallery-cards, 
+.gallery-testimonials, 
+.gallery-toasts,
+.gallery-tooltips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.25fr 1fr 1fr;
+    margin-bottom: 10px;
+    padding-bottom: 50px;
+    border-bottom: 0.5px solid #d1d3d813;
+}
+
+.gallery-badges-text,
+.gallery-banners-text,
+.gallery-cards-text,
+.gallery-testimonials-text,
+.gallery-toasts-text,
+.gallery-tooltips-text {
+    place-items: center;
+}
+
+.gallery-badges-show-examples,
+.gallery-banners-show-examples,
+.gallery-cards-show-examples,
+.gallery-testimonials-show-examples,
+.gallery-toasts-show-examples,
+.gallery-tooltips-show-examples {
+    gap: 10px;
+    padding-top: 40px;
+}
+
+/* Badge Component Container Specific Styles */
+
+.gallery-badges{
+    grid-area: badge;
+    grid-template-areas:
+    "bdgtext bdgtext ....... bdgshow bdgshow"
+    "....... bdgexpl bdgexpl bdgexpl .......";
+}
+
+.gallery-badges-text {
+    grid-area: bdgtext;
+    padding-top: 20px;
+}
+
+.gallery-badges .gallery-badges-show-examples {
+    grid-area: bdgshow;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-items: center;
+}
+
+.gallery-badges .gallery-link-button.badges {
+    grid-area: bdgexpl;
+}
+
+/* Banner Component Container Specific Styles */
+
+.gallery-banners {
+    grid-area: baner;
+    grid-template-areas:
+    "bnrshow bnrshow ....... bnrtext bnrtext"
+    "....... bnrexpl bnrexpl bnrexpl .......";
+}
+
+.gallery-banners-text {
+    grid-area: bnrtext;
+    padding-top: 16px;
+}
+
+.gallery-banners .gallery-banners-show-examples {
+    grid-area: bnrshow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-banners .gallery-link-button.banners {
+    grid-area: bnrexpl;
+}
+/* Card Component Container Specific Styles */
+
+.gallery-cards {
+    grid-area: cards;
+    grid-template-areas:
+    "crdtext crdtext ....... crdshow crdshow"
+    "....... crdexpl crdexpl crdexpl .......";
+}
+
+.gallery-cards-text {
+    grid-area: crdtext;
+    padding-top: 40px;
+}
+
+.gallery-cards .gallery-cards-show-examples {
+    grid-area: crdshow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-cards .gallery-link-button.cards {
+    grid-area: crdexpl;
+}
+
+/* Testimonial Component Container Specific Styles */
+
+.gallery-testimonials {
+    grid-area: tests;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "tstshow tstshow ....... tsttext tsttext"
+    "....... tstexpl tstexpl tstexpl .......";
+}
+
+.gallery-testimonials-text {
+    grid-area: tsttext;
+    padding-top: 40px;
+}
+
+.gallery-testimonials .gallery-testimonials-show-examples {
+    grid-area: tstshow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-testimonials .gallery-link-button.testimonials {
+    grid-area: tstexpl;
+}
+
+/* Toast Component Container Specific Styles */
+
+.gallery-toasts {
+    grid-area: toast;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "tostext tostext ....... tosshow tosshow"
+    "....... tosexpl tosexpl tosexpl .......";
+}
+
+.gallery-toasts-text {
+    grid-area: tostext;
+    padding-top: 40px;
+}
+
+.gallery-toasts .gallery-toasts-show-examples {
+    grid-area: tosshow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: none;
+}
+
+.gallery-toasts .gallery-link-button.toasts {
+    grid-area: tosexpl;
+}
+
+/* Tooltip Component Container Specific Styles */
+
+.gallery-tooltips {
+    grid-area: toolt;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "tltshow tltshow ....... tlttext tlttext"
+    "....... tltexpl tltexpl tltexpl .......";
+}
+
+.gallery-tooltips-text {
+    grid-area: tlttext;
+    padding-top: 40px;
+}
+
+.gallery-tooltips .gallery-tooltips-show-examples {
+    grid-area: tltshow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: none;
+}
+
+.gallery-tooltips .gallery-link-button.tooltips {
+    grid-area: tltexpl;
+}
+
+/* Specific Styling for Gallery */
+
+.banner h1, .card h1, .testimonial h1, .toast h1, .tooltip h1 {
+    padding-bottom: 1px;
+}
+
+.gallery-toasts .gallery-toasts-show-examples .toast-trigger {
+    margin: 20px 0 0 0;
+} 
+
+.gallery-toasts .component-test-button,
+.gallery-tooltips .component-test-button {
+    color: white;
+    border-color: white;
+}
+
+/* Media Queries for different screen sizes. */
+
+    @media (max-width: 1400px) {
+    .gallery-badges, .gallery-banners, .gallery-cards, .gallery-toasts, .gallery-tooltips {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .gallery-badges {
+        grid-template-areas:
+        ". bdgtext ."
+        ". bdgshow ."
+        ". bdgexpl .";
+    }
+
+    .gallery-banners {
+        grid-template-areas:
+        ". bnrtext ."
+        ". bnrshow ."
+        ". bnrexpl .";
+    }
+
+    .gallery-cards {
+        grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-areas:
+        ". crdtext ."
+        ". crdshow ."
+        ". crdexpl .";
+    }
+
+    .gallery-testimonials {
+        grid-template-rows: 200px 200px;
+        grid-template-areas:
+        "tstshow tstshow ....... tsttext tsttext"
+        "tstshow tstshow ....... tstexpl tstexpl"
+    }
+
+    .gallery-toasts{
+        grid-template-areas:
+        ". tostext ."
+        ". tosshow ."
+        ". tosexpl .";
+    }
+
+    .gallery-tooltips{
+        grid-template-areas:
+        ". tlttext ."
+        ". tltshow ."
+        ". tltexpl .";
+    }
+
+    .gallery-badges-text,
+    .gallery-banners-text,
+    .gallery-cards-text,
+    .gallery-toasts-text,
+    .gallery-tooltips-text {
+        text-align: center;
+    }
+
+    .gallery-testimonials .gallery-testimonials-show-examples {
+        padding-top: 30px;
+    }
+
+    .gallery-testimonials .gallery-testimonials-text {
+        padding-top: 50px;
+    }
+}
+
+@media (max-width: 750px){
+
+    .gallery-container h1, .outro  {
+        font-size: 1rem;
+
+    }
+
+    .gallery-container .gallery-badges .gallery-badges-text,
+    .gallery-container .gallery-banners .gallery-banners-text,
+    .gallery-container .gallery-cards .gallery-cards-text,
+    .gallery-container .gallery-toasts .gallery-toasts-text,
+    .gallery-container .gallery-tooltips .gallery-tooltips-text {
+        padding-top: 0px;
+    }
+
+    .gallery-container .gallery-testimonials .gallery-testimonials-text {
+        text-align: center;
+    }
+
+    .card-container {
+        padding: 0;
+    }
+
+    .gallery-cards .gallery-cards-show-examples{
+        padding-top: 0px;
+    }
+    
+    .gallery-testimonials .gallery-testimonials-show-examples {
+        padding-top: 30px;
+    }
+
+    .gallery-toasts .gallery-toasts-show-examples,
+    .gallery-tooltips .gallery-tooltips-show-examples {
+        padding-top: 0px
+    }
+
+    .gallery-toasts .gallery-toasts-show-examples {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: none;
+    }
+
+    .gallery-testimonials {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "tsttext"
+        "tstshow"
+        "tstexpl";
+        place-items: center;
+    }
+
+    .gallery-cards {
+        padding-bottom: 60px;
+    }
+}

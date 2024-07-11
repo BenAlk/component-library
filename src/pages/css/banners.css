@@ -1,0 +1,63 @@
+.example-banner-container > .example-container {
+    max-width: 1400px;
+}
+
+.example-banner-container > .example-container h2 {
+    font-size: 1rem;
+}
+
+.example-banner-container > .example-container {
+    display: grid;
+    grid-template-columns: 0.25 repeat(3, 1fr) 0.25fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "..... ..... single multi ....."
+    "..... success s-single s-multi ....."
+    "..... info i-single i-multi ....."
+    "..... attention a-single a-multi ....."
+    "..... error e-single e-multi .....";
+    gap: 10px 5px;
+    place-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813;
+}
+
+
+.example-banner-container > .example-container > .example,
+.example-banner-container > .example-container > .heading {
+    width: 100%;
+}
+
+.example-banner-container > .example-container > .heading {
+    font-size: 0.8rem;
+    color: #68bbdb;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #68bbdb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.example-banner-container > .example-container > .heading:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+}
+
+.example-banner-container > .example-container > .multi-success {grid-area: s-multi;}
+.example-banner-container > .example-container > .multi-neutral {grid-area: i-multi;}
+.example-banner-container > .example-container > .multi-attention {grid-area: a-multi;}
+.example-banner-container > .example-container > .multi-error {grid-area: e-multi;}
+.example-banner-container > .example-container > .single-success {grid-area: s-single;}
+.example-banner-container > .example-container > .single-neutral {grid-area: i-single;}
+.example-banner-container > .example-container > .single-attention {grid-area: a-single;}
+.example-banner-container > .example-container > .single-error {grid-area: e-single;}
+
+.example-banner-container > .example-container > .example {display: flex; justify-content: center;}
+.example-banner-container > .example-container > .heading {place-self: center;}
+
+.example-banner-container > .example-container > .multi.heading { grid-area: multi;}
+.example-banner-container > .example-container > .single.heading { grid-area: single;}
+
+.example-banner-container > .example-container > .success-text { grid-area: success;}
+.example-banner-container > .example-container > .neutral-text { grid-area: info;}
+.example-banner-container > .example-container > .attention-text { grid-area: attention;}
+.example-banner-container > .example-container > .error-text { grid-area: error;}

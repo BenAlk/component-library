@@ -1,0 +1,76 @@
+.code-playground {
+    margin: 0 auto;
+    margin-top: 20px;
+    max-width: 500px;
+    position: relative;
+}
+
+
+
+.copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.code-playground pre {
+    border-radius: 10px;
+}
+
+.code-playground.editable .prism-code.language-tsx {
+    border-radius: 10px;
+    border: 1px solid #68bbdb;
+}
+
+.run-button:hover {
+    background-color: #0056b3;
+}
+
+.preview-area {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #16212C;
+}
+
+.preview-area pre {
+    background-color: black;
+    color: red;
+    padding: 20px;
+    margin-top: -10px;
+}
+
+@media (min-width: 1150px) {
+    .code-playground.import pre{
+        min-width: 375px;        
+    }
+}
+
+@media (max-width: 850px) {
+    .code-playground {
+        max-width: 300px;
+    }
+    .copy-button {
+        height: 15px;
+        width: 15px;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 475px){
+    .code-playground {
+        max-width: 250px;
+    }
+
+    .copy-button {
+        height: 15px;
+        width: 15px;
+    }
+
+    .preview-area pre {
+        font-size: 0.5rem;
+        font-family: 'Roboto'
+    }
+}

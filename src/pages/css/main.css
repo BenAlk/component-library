@@ -1,0 +1,52 @@
+/* Main Page Styles */
+
+.welcome-container, .gallery-container {
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+}
+
+h1, h2, h3, p {
+    color: white;
+    font-weight: 300;
+}
+
+.welcome-container h1,
+.gallery-container h1 {
+    font-size: 1.25rem;
+    grid-area: intro;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.welcome-link-button, .gallery-link-button, .component-test-button {
+    color: #68bbdb;
+    border: 1px solid #68bbdb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    grid-area: butt;
+}
+
+.welcome-link-button:hover, .gallery-link-button:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+    color: white;
+    border: 1px solid white;
+}
+
+/* demo pages */
+
+.example-intro {
+    border-bottom: 1px solid #d1d3d813;
+    margin: 30px 0 40px 0;
+    padding-bottom: 20px;
+}
+.example-intro h1 {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+}
