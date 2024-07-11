@@ -33,8 +33,12 @@ export default function Banners () {
     
 
     const bannerVariantHeads = bannerData.slice(3,5).map((item, index) => {
-        return (
-            <div key={`head-${index}`} className={`${item.variant} heading`}>{capitalizeFirstLetter(item.variant)}</div>
+        return (<>
+            <div key={`head-${index}`} className={`${item.variant}1 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}`} className={`${item.variant}2 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}`} className={`${item.variant}3 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}`} className={`${item.variant}4 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+            </>
         )
     })
 

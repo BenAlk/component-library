@@ -54,10 +54,54 @@
 .example-banner-container > .example-container > .example {display: flex; justify-content: center;}
 .example-banner-container > .example-container > .heading {place-self: center;}
 
-.example-banner-container > .example-container > .multi.heading { grid-area: multi;}
-.example-banner-container > .example-container > .single.heading { grid-area: single;}
+.example-banner-container > .example-container > .multi1.heading { grid-area: multi;}
+.example-banner-container > .example-container > .single1.heading { grid-area: single;}
 
 .example-banner-container > .example-container > .success-text { grid-area: success;}
 .example-banner-container > .example-container > .neutral-text { grid-area: info;}
 .example-banner-container > .example-container > .attention-text { grid-area: attention;}
 .example-banner-container > .example-container > .error-text { grid-area: error;}
+
+.example-banner-container > .example-container > .multi2.heading,
+.example-banner-container > .example-container > .multi3.heading,
+.example-banner-container > .example-container > .multi4.heading,
+.example-banner-container > .example-container > .single2.heading,
+.example-banner-container > .example-container > .single3.heading, 
+.example-banner-container > .example-container > .single4.heading {
+    display: none;
+}
+
+
+@media (max-width: 500px){
+    .example-banner-container > .example-container {
+        padding: 0 20px 40px;
+        grid-template-columns: 0.5fr 1fr 0.1fr;
+        grid-template-areas: 
+        "..... success ....."
+        "single s-single ....."
+        "multi s-multi ....."
+        "..... info ....."
+        "single2 i-single ....."
+        "multi2 i-multi ....."
+        "..... attention ....."
+        "single3 a-single ....."
+        "multi3 a-multi ....."
+        "..... error ....."
+        "single4 e-single ....."
+        "multi4 e-multi .....";
+    }
+
+    .example-banner-container > .example-container > .multi2.heading { display: block; grid-area: multi2;}
+    .example-banner-container > .example-container > .multi3.heading { display: block; grid-area: multi3;}
+    .example-banner-container > .example-container > .multi4.heading { display: block; grid-area: multi4;}
+    .example-banner-container > .example-container > .single2.heading { display: block; grid-area: single2;}
+    .example-banner-container > .example-container > .single3.heading { display: block; grid-area: single3;}
+    .example-banner-container > .example-container > .single4.heading { display: block; grid-area: single4;}
+
+    .example.banner-container > .example-container > .multi1.heading,
+    .example-banner-container > .example-container > .multi2.heading,
+    .example-banner-container > .example-container > .multi3.heading,
+    .example-banner-container > .example-container > .multi4.heading {
+        place-self:start;
+    }
+}

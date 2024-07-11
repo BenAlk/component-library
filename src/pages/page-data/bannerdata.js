@@ -109,6 +109,6 @@ const advancedCode = `
             </Banner.Text>
         </Banner>
 `
-const customBannerStyle={width: "400px"}
+const customBannerStyle={width: "100%"}
 
 export { bannerData, customBannerStyle, importCode, basicCode, advancedCode, playgroundCode } 
