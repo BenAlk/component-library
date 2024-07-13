@@ -3,6 +3,7 @@ import Welcome from "./Welcome"
 import Gallery from "./Gallery"
 import Banners from "./banners"
 import Badges from "./badges"
+import Toasts from "./toasts"
 import "./css/main.css"
 
 export default function Main() { 
@@ -11,6 +12,7 @@ export default function Main() {
             {/* <Welcome /> */}
             {/* <Gallery /> */}
             {/* <Badges /> */}
-            <Banners />
+            {/* <Banners /> */}
+            <Toasts />
         </div>)
 }

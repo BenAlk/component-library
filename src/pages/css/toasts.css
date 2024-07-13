@@ -1,0 +1,95 @@
+.example-toast-container {
+    max-width: 1400px;
+
+}
+
+.example-toast-container h2 {
+    font-size: 1rem;
+}
+
+.example-toast-container h2 span {
+    color: #68bbdb;
+    font-size: 1.25rem;
+}
+
+.example-toast-container > .example-container {
+    display: grid;
+    grid-template-columns : 0.25fr 1fr 0.25fr 1fr 0.25fr;
+    grid-template-areas: 
+    "..... success-text ..... info-text ....."
+    "..... toast-success ..... toast-info ....."
+    "..... attention-text ..... error-text ....."
+    "..... toast-attention ..... toast-error .....";
+    gap: 5px;
+    place-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.example-toast-container > .example-container > .example,
+.example-toast-container > .example-container > .heading{
+    width: 100%;
+}
+
+.example-toast-container > .example-container > .heading {
+    font-size: 0.8rem;
+    color: #68bbdb;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #68bbdb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.example-toast-container > .example-container > .toast-success {grid-area: toast-success}
+.example-toast-container > .example-container > .toast-info {grid-area: toast-info}
+.example-toast-container > .example-container > .toast-attention {grid-area: toast-attention}
+.example-toast-container > .example-container > .toast-error {grid-area: toast-error}
+
+.example-toast-container > .example-container > .success-text {grid-area: success-text}
+.example-toast-container > .example-container > .info-text {grid-area: info-text}
+.example-toast-container > .example-container > .attention-text {grid-area: attention-text}
+.example-toast-container > .example-container > .error-text {grid-area: error-text}
+
+div .toast-trigger.undefined {
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .example-toast-container > .example-container > .toast {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 675px) {
+    .example-toast-container > .example-container {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-areas: 
+        " ..... success-text ....."
+        " ..... toast-success ....."
+        " ..... info-text ....."
+        " ..... toast-info ....."
+        " ..... attention-text ....."
+        " ..... toast-attention ....."
+        " ..... error-text ....."
+        " ..... toast-error .....";
+        gap: 10px;
+    }
+}
+
+@media (max-width: 520px) {
+    .example-toast-container > .example-container > .toast {
+        font-size: 0.6rem;
+        padding: 5px;
+    }
+    .example-toast-container > .example-container > .toast-icon {
+        height: 15px;
+        width: 15px;
+    }
+}
+
+@media (max-width: 475px) {
+    .import-code  pre  .token-line {
+        font-size: 0.5rem;
+    }
+}

@@ -39,18 +39,18 @@
 
 
 /* Warning */
-.toast.toast-warning {
+.toast.toast-attention {
     background-color: #FFFBEB;
     font-size: 0.875rem;
     animation: slideDown 0.5s ease-out;
 }
 
-.toast.toast-warning .toast-title {
+.toast.toast-attention .toast-title {
     font-weight: 500;
     color:#92400E;
 }
 
-.toast.toast-warning .toast-text {
+.toast.toast-attention .toast-text {
     font-weight: 400;
     color:#B45309;
 }
@@ -127,6 +127,15 @@
     padding-left: 4px;
 }
 
+
+.toast-trigger { 
+    background-color: transparent;
+    color: #68bbdb ;
+    border: 1px solid #68bbdb;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);

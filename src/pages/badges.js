@@ -6,11 +6,11 @@ import { capitalizeFirstLetter } from '../utils/utils.js'
 import ComponentPage from './component/component-page/component-page-index'
 export default function Badges () {
     const [exampleColor, setExampleColor] = React.useState("")
-    const [examplevariant, setExamplevariant] = React.useState("")
+    const [exampleVariant, setExampleVariant] = React.useState("")
 
     function handleChange(e) {
     setExampleColor(e.color)
-    setExamplevariant(e.variant)
+    setExampleVariant(e.variant)
 }
 
 /* Generate example badges */    
@@ -20,24 +20,24 @@ export default function Badges () {
         )
     })
 /* Generate color and style headers */
-    const colorHeads = badgeData.slice(0, 8).map(item => {
+    const colorHeads = badgeData.slice(0, 8).map((item, index) => {
         return (
-            <div className={`${item.color}-text heading`}>{capitalizeFirstLetter(item.color)}</div>
+            <div key={index}className={`${item.color}-text heading`}>{capitalizeFirstLetter(item.color)}</div>
         )
     })
 
-    const styleHeads = badgeData.slice(7, 9).map(item => {
+    const styleHeads = badgeData.slice(7, 9).map((item, index) => {
         return (
-            <>
-            <div className={`${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
-            <div className={`${item.style}${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
-            </>
+            <React.Fragment key={index}>
+                <div className={`${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
+                <div className={`${item.style}${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
+            </React.Fragment>
         )
     })
 
 /* Re-factor basic code for dynamic color and style options */
 
-    const exampleBasicCode =  basicCode(exampleColor, examplevariant)
+    const exampleBasicCode =  basicCode(exampleColor, exampleVariant)
 
     return (
         <div className="example-badge-container">

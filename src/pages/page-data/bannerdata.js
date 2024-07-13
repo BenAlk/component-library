@@ -60,7 +60,7 @@ const bannerData =  [
 const playgroundCode = `
         <Banner 
             variant="multi" 
-            bannerType="info" 
+            bannerType="error" 
             style={{backgroundColor: "black"}} 
             headStyle={{color: "red"}} 
             textStyle={{color: "purple"}}
@@ -97,7 +97,7 @@ const basicCode = (exampleVariant, exampleBannerType) => {
 const advancedCode = `
         <Banner variant="multi" 
                 bannerType="info" 
-                style={{color: "black"}} 
+                style={{backgroundColor: "black"}} 
                 headStyle={{color: "red"}} 
                 textStyle={{color: "purple"}}
             >

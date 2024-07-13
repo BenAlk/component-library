@@ -2,12 +2,12 @@ import React from 'react';
 import "./Toast.css";
 import Success from "./images/success.png"
 import Info from "./images/info.png"
-import Warning from "./images/warning.png"
+import Attention from "./images/warning.png"
 import Error from "./images/error.png"
 ;
 const ToastContext = React.createContext();
 
-export default function ToastProvider({ children }) {
+export default function ToastProvider({ children, titleStyle, textStyle }) {
     const [toasts, setToasts] = React.useState([]);
 
     const addToast = (title, text, variant) => {
@@ -23,7 +23,7 @@ export default function ToastProvider({ children }) {
     const toastIcons = {
         success: Success,
         info: Info,
-        warning: Warning,
+        attention: Attention,
         error: Error,
     }
 
@@ -34,8 +34,8 @@ export default function ToastProvider({ children }) {
                 {toasts.map((toast) => (
                     <div key={toast.id} className={`toast toast-${toast.variant}`}>
                         <div className="toast-icon"><img src={toastIcons[toast.variant]} alt={`${toast.variant} logo`}/></div>
-                        <div className="toast-title">{toast.title}</div>
-                        <div className="toast-text">{toast.text}</div>
+                        <div className="toast-title" style={titleStyle}>{toast.title}</div>
+                        <div className="toast-text" style={textStyle}>{toast.text}</div>
                         <div className="toast-close" onClick={() => removeToast(toast.id)}>X</div>
                     </div>
                 ))}
