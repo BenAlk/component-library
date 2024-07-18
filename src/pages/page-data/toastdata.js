@@ -43,6 +43,7 @@ const basicCode = (exampleVariant, exampleTitle, exampleText) => {
     return `
         <Toast>
             <ToastTrigger 
+                styleClassName={" /* your className here */ "}
                 title={"${exampleTitle}"} 
                 text={"${exampleText}"} 
                 variant={"${exampleVariant}"}

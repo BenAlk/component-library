@@ -68,7 +68,7 @@ return (
                         logoDescription={"Brand logo, an arrow pointing up into a cloud."}
                         >
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur, ipsum similique veniam quo totam eius aperiam dolorum.
-                        </Card>
+                    </Card>
                 </Component.Card>
             </Component>
             

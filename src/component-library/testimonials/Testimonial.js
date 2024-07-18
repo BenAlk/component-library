@@ -5,14 +5,14 @@ import Logo from "./images/logo.png"
 import dots from "./images/dots.svg"
 import "./Testimonial.css"
 
-export default function Testimonial({children, person, type}) {
+export default function Testimonial({children, person, style}) {
 
     // const imgUrl = `url(${Portrait})`
 
     return (
-    <>  {type === "picture" ?
+    <>  {style === "picture" ?
         (<div className="testimonial">
-            <img className="testimonial-image" src={Portrait} alt="Portrait of testimonial" />
+            <img className="testimonial-image" src={person.image} alt="Portrait of testimonial" />
             <div className="color-box"></div>
             <div className="testimonial-content">
                 <img src={Quote} alt="quotation mark" />
@@ -22,7 +22,7 @@ export default function Testimonial({children, person, type}) {
                     <p className="testimonial-title">{person.title}</p>
                 </div>
             </div>
-        </div> ): type === "plain" ?
+        </div> ): style === "plain" ?
         (<div className="testimonial-plain">
             <div className="testimonial-plain-content-container">
             <img src={Logo} alt="Workcation Logo" />

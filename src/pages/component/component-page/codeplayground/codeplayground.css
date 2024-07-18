@@ -5,7 +5,9 @@
     position: relative;
 }
 
-
+.code-playground .toast-trigger {
+    border: none;
+}
 
 .copy-button {
     position: absolute;

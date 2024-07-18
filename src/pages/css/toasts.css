@@ -55,6 +55,16 @@ div .toast-trigger.undefined {
     display: none;
 }
 
+.example-toast-container  > .example-container .toast {
+    min-width: 275px;
+}
+
+
+.toast.no-effects {
+    animation: none;
+}
+
+
 @media (max-width: 850px) {
     .example-toast-container > .example-container > .toast {
         font-size: 0.8rem;
@@ -81,6 +91,7 @@ div .toast-trigger.undefined {
     .example-toast-container > .example-container > .toast {
         font-size: 0.6rem;
         padding: 5px;
+        min-width: 215px;
     }
     .example-toast-container > .example-container > .toast-icon {
         height: 15px;

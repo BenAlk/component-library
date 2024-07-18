@@ -43,6 +43,7 @@
     color: #111827;
     font-weight: 500;
     margin-bottom: 20px;
+    padding-top: 20px;
 }
 
 .content {
@@ -63,5 +64,38 @@
 
     .card .content {
         font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 550px ) {
+    .card {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card {
+        max-width: 225px;
+    }
+
+    .card > .card-logo { 
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .card > h1.card-title{
+        font-size: 0.8rem;
+        padding-top: 10px;
+        margin-bottom: 0; 
+    }
+
+    .card > .content {
+        font-size: 0.6rem;
+    }
+
+    .card > .card-logo > img {
+        height: 50px;
+        width: 50px;
     }
 }

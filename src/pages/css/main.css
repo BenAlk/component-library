@@ -86,7 +86,7 @@ h1, h2, h3, p {
     font-weight: 500;
 }
 
-.advanced-code-text p span {
+.advanced-code-text p span, .basic-code-text p span {
     color: #68bbdb;
 }
 

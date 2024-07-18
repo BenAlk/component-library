@@ -98,12 +98,12 @@ const importCode = `
         import {Badge} from "ScrimbaComponents"
     `
     
-    const basicCode = (exampleColor, exampleType) => {
+const basicCode = (exampleColor, exampleVariant) => {
 
     return `
         <Badge
             color={"${exampleColor}"}
-            variant={"${exampleType}"}
+            variant={"${exampleVariant}"}
         >
             Your Chosen Text
         </Badge>

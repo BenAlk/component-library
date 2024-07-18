@@ -1,0 +1,69 @@
+.example-card-container {
+    max-width: 1400px;
+}
+
+.example-card-container > .example-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.preview-area div {
+    margin: 0 auto;
+}
+
+
+@media (max-width: 775px ) {
+    .example-card-container > .basic-code {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas:
+        ".... text text ...."
+        ".... code code ....";
+    }
+
+    .example-card-container > .example-container > .card-container > .card,
+    .code-playground > .preview-area >  div >  .card-container > .card {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .example-card-container > .example-container > .card-container > .card,
+    .code-playground > .preview-area >  div >  .card-container > .card {
+        max-width: 225px;
+    }
+
+    .example-card-container > .example-container > .card-container > .card > .card-logo,
+    .code-playground > .preview-area >  div >  .card-container > .card > .card-logo { 
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .example-card-container > .example-container > .card-container > .card > h1.card-title,
+    .code-playground > .preview-area >  div >  .card-container > .card > h1.card-title {
+        font-size: 0.8rem;
+        padding-top: 10px;
+        margin-bottom: 0; 
+    }
+
+    .example-card-container > .example-container > .card-container > .card > .content,
+    .code-playground > .preview-area >  div >  .card-container > .card .content {
+        font-size: 0.6rem;
+    }
+
+    .example-card-container > .example-container > .card-container > .card > .card-logo > img,
+    .code-playground > .preview-area >  div >  .card-container > .card > .card-logo > img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 475px) {
+    .basic-code pre .token-line{
+        font-size: 0.5rem;
+    }
+}

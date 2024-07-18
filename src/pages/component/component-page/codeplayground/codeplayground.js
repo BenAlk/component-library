@@ -26,8 +26,9 @@ export default function CodePlayground({ scope, componentCode, readOnly = false,
                     disabled={readOnly}
                     lineNumbers={true} 
                 />
-                <Toast >
+                <Toast>
                     <ToastTrigger 
+                        styleClassName={""}
                         title="Copied!" 
                         text="Code copied to clipboard!" 
                         variant="success"

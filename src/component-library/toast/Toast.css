@@ -74,10 +74,6 @@
     color:#B45309;
 }
 
-
-
-
-
 .toast-container {
     position: fixed;
     top: 20px;
@@ -97,7 +93,7 @@
     grid-template-areas: 
         "icon title close"
         ".... text ....";
-
+    cursor: pointer;
 }
 
 .toast-icon {
@@ -136,6 +132,7 @@
     cursor: pointer;
 
 }
+
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
