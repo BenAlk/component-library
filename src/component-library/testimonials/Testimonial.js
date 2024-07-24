@@ -12,20 +12,20 @@ export default function Testimonial({children, person, style}) {
     return (
     <>  {style === "picture" ?
         (<div className="testimonial">
-            <img className="testimonial-image" src={person.image} alt="Portrait of testimonial" />
+            <img className="testimonial-image" src={person.image ? person.image : Portrait} alt="Portrait of testimonial" />
             <div className="color-box"></div>
             <div className="testimonial-content">
                 <img src={Quote} alt="quotation mark" />
                 <div className="testimonial-quote">{children}</div>
-                <div>
-                    <h1 className="testimonial-person">{person.name}</h1>
+                <div className="testimonial-person">
+                    <h1 className="testimonial-name">{person.name}</h1>
                     <p className="testimonial-title">{person.title}</p>
                 </div>
             </div>
-        </div> ): style === "plain" ?
+        </div> ) : style === "plain" ?
         (<div className="testimonial-plain">
             <div className="testimonial-plain-content-container">
-            <img src={Logo} alt="Workcation Logo" />
+            <img src={person.image ? person.image : Logo} alt="Workcation Logo" />
                 <h1 className="testimonial-plain-quote">{`"${children}"`}</h1>
                 <div className="testimonial-plain-contact">
                     <span className="testimonial-plain-name">{person.name}</span><span className="testimonial-plain-divider hidden"> / </span><span className="testimonial-plain-title">{person.title}</span>

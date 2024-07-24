@@ -71,7 +71,12 @@
     user-select: none;
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+.welcome-link a {
     grid-area: butt;
+    text-decoration: none;
+
 }
 
 .welcome-link-button:hover {

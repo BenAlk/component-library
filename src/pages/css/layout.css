@@ -4,3 +4,183 @@
     flex-direction: column;
     align-items: center;
 }
+
+/* Main Page Styles */
+
+.welcome-container, .gallery-container {
+    margin: 0 auto;
+    margin-top: 40px;
+    display: grid;
+}
+
+h1, h2, h3, p {
+    color: white;
+    font-weight: 300;
+}
+
+.welcome-container h1,
+.gallery-container h1 {
+    font-size: 1.25rem;
+    grid-area: intro;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.welcome-link-button, .gallery-link-button, .component-test-button {
+    color: #68bbdb;
+    border: 1px solid #68bbdb;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0.8rem;
+    font-weight: 400;
+    grid-area: butt;
+}
+
+.welcome-link-button:hover, .gallery-link-button:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+    color: white;
+    border: 1px solid white;
+}
+
+/* demo pages */
+
+.example-intro {
+    border-bottom: 1px solid #d1d3d813;
+    margin: 30px 0 40px 0;
+    padding-bottom: 20px;
+}
+.example-intro h1 {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+}
+
+.basic-code, .advanced-code, .import-code {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.25fr 1fr 0.5fr;
+    margin-top: 40px;
+    padding-bottom: 60px;
+}
+
+.import-code {
+    grid-template-areas: 
+    ".... text .... code ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.basic-code {
+    grid-template-areas: 
+    ".... code .... text ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.advanced-code {
+    grid-template-areas: 
+    ".... text .... code ....";
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.playground-code {
+    padding-bottom: 20px;
+}
+
+.basic-code-text h2, .advanced-code-text h2, .import-code-text h2, .playground-code h2 {
+    color: #68bbdb;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.advanced-code-text p span, .basic-code-text p span {
+    color: #68bbdb;
+}
+
+.basic-code-text, .advanced-code-text, .import-code-text {
+    grid-area: text;
+}
+
+.playground-code-text{
+    margin: 40px 0;
+    text-align: center;
+}
+
+.basic-code-visual, .advanced-code-visual, .import-code-visual {
+    grid-area: code;
+}
+
+.import-code-visual {
+    padding-top: 25px;
+}
+
+@media (max-width: 1150px) {
+    .import-code-visual {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .advanced-code-text p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 850px) {
+    
+
+    .example-intro h1, .basic-code-text h2, .advanced-code-text h2, .import-code-text h2, .playground-code h2  {
+        font-size: 0.8rem;
+    }
+
+    .example-badge-container {
+        max-width: 600px;
+    }
+
+    .advanced-code-text p, .basic-code-text p, .import-code-text p, .playground-code-text p {
+        font-size: 0.8rem;
+    }
+
+    .advanced-code-visual, .basic-code-visual, .playground-code-visual {
+        font-size: 0.6rem;
+    }
+
+    .import-code-visual {
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 675px) {
+    .advanced-code {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas: 
+        ".... text text ...."
+        ".... code code ....";
+    }
+
+    .advanced-code-text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 475px) {
+
+    .import-code, .basic-code, .advanced-code, .playground-code {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr;
+        grid-template-areas: 
+        ".... text text ...."
+        ".... code code ....";
+    }
+
+    .import-code-text, .basic-code-text, .advanced-code-text {
+        text-align: center;
+    }
+
+    .playground-code-text {
+        grid-area: text;
+    }
+
+    .playground-code-visual{
+        grid-area: code;
+    }
+}

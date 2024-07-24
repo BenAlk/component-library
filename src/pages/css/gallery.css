@@ -1,6 +1,7 @@
 /* Gallery General Styles */
 
 .gallery-container {
+    max-width: 1400px;
     grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 0.5fr 0.5fr;
     grid-template-areas:
     "..... intro intro intro intro intro intro ....."
@@ -48,7 +49,7 @@
 .gallery-toasts,
 .gallery-tooltips {
     display: grid;
-    grid-template-columns: 1fr 1fr 0.25fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.6fr 1fr 1fr;
     margin-bottom: 10px;
     padding-bottom: 50px;
     border-bottom: 0.5px solid #d1d3d813;
@@ -79,7 +80,7 @@
     grid-area: badge;
     grid-template-areas:
     "bdgtext bdgtext ....... bdgshow bdgshow"
-    "....... bdgexpl bdgexpl bdgexpl .......";
+    "....... ....... bdgexpl ....... .......";
 }
 
 .gallery-badges-text {
@@ -94,8 +95,13 @@
     place-items: center;
 }
 
-.gallery-badges .gallery-link-button.badges {
+
+.gallery-badges a {
     grid-area: bdgexpl;
+}
+
+.gallery-badges a .gallery-link-button.badges {
+    
 }
 
 /* Banner Component Container Specific Styles */
@@ -104,7 +110,7 @@
     grid-area: baner;
     grid-template-areas:
     "bnrshow bnrshow ....... bnrtext bnrtext"
-    "....... bnrexpl bnrexpl bnrexpl .......";
+    "....... ....... bnrexpl ....... .......";
 }
 
 .gallery-banners-text {
@@ -120,7 +126,7 @@
     justify-content: center;
 }
 
-.gallery-banners .gallery-link-button.banners {
+.gallery-banners a {
     grid-area: bnrexpl;
 }
 /* Card Component Container Specific Styles */
@@ -129,7 +135,7 @@
     grid-area: cards;
     grid-template-areas:
     "crdtext crdtext ....... crdshow crdshow"
-    "....... crdexpl crdexpl crdexpl .......";
+    "....... ....... crdexpl ....... .......";
 }
 
 .gallery-cards-text {
@@ -145,7 +151,7 @@
     justify-content: center;
 }
 
-.gallery-cards .gallery-link-button.cards {
+.gallery-cards a {
     grid-area: crdexpl;
 }
 
@@ -156,7 +162,7 @@
     grid-template-rows: auto;
     grid-template-areas:
     "tstshow tstshow ....... tsttext tsttext"
-    "....... tstexpl tstexpl tstexpl .......";
+    "....... ....... tstexpl ....... .......";
 }
 
 .gallery-testimonials-text {
@@ -171,7 +177,7 @@
     align-items: center;
 }
 
-.gallery-testimonials .gallery-link-button.testimonials {
+.gallery-testimonials a {
     grid-area: tstexpl;
 }
 
@@ -182,7 +188,7 @@
     grid-template-rows: auto;
     grid-template-areas:
     "tostext tostext ....... tosshow tosshow"
-    "....... tosexpl tosexpl tosexpl .......";
+    "....... ....... tosexpl ....... .......";
 }
 
 .gallery-toasts-text {
@@ -198,7 +204,7 @@
     gap: none;
 }
 
-.gallery-toasts .gallery-link-button.toasts {
+.gallery-toasts a {
     grid-area: tosexpl;
 }
 
@@ -209,7 +215,7 @@
     grid-template-rows: auto;
     grid-template-areas:
     "tltshow tltshow ....... tlttext tlttext"
-    "....... tltexpl tltexpl tltexpl .......";
+    "....... ....... tltexpl ....... .......";
 }
 
 .gallery-tooltips-text {
@@ -225,9 +231,22 @@
     gap: none;
 }
 
-.gallery-tooltips .gallery-link-button.tooltips {
+.gallery-tooltips a {
     grid-area: tltexpl;
 }
+
+.gallery-badges a,
+.gallery-banners a,
+.gallery-cards a,
+.gallery-testimonials a,
+.gallery-toasts a,
+.gallery-tooltips a {
+    text-decoration: none;
+    text-align: center;
+    /* display: flex; */
+}
+
+
 
 /* Specific Styling for Gallery */
 

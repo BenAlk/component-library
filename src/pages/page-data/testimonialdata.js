@@ -4,7 +4,7 @@ const testimonialData = [
         person: {
             name: "Enter Name Here",
             title: "Persons job title",
-            image: "Logo"
+            image: ""
         }
     },
     {
@@ -12,7 +12,7 @@ const testimonialData = [
         person: {
             name: "Enter Name Here",
             title: "Persons job title",
-            image: "https://st.depositphotos.com/11742109/51383/v/450/depositphotos_513837330-stock-illustration-gender-neutral-profile-avatar-side.jpg"
+            image: "https://static.vecteezy.com/system/resources/thumbnails/002/275/847/small_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
         }
     }
 ]
@@ -25,8 +25,9 @@ const basicCode = (exampleVariant) => {
 
     return `
     <Testimonial 
-        variant={"${exampleVariant}"}
-        person={{name: "Enter name here", 
+        style="${exampleVariant}"
+        person={{
+            name: "Enter name here", 
             title: "Job title", 
             image: "hyperlink to image"
         }}
@@ -41,10 +42,11 @@ const basicCode = (exampleVariant) => {
 
 const playgroundCode = `
         <Testimonial 
-            variant="picture" 
-            person={{name: "Ben Alkureishi", 
+            style="picture"
+            person={{
+                name: "Ben Alkureishi", 
                 title: "Front-end Developer", 
-                image: "/images/ben.jpg"
+                image: "https://static.vecteezy.com/system/resources/thumbnails/002/275/847/small_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
             }}
         >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

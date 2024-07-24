@@ -1,0 +1,105 @@
+.example-testimonial-container {
+    max-width: 1400px;
+}
+
+.example-testimonial-container > .example-container {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+    grid-template-areas: 
+    "..... pichead ....."
+    "..... picexam ....."
+    "..... plahead ....."
+    "..... plaexam .....";
+    place-items: center;
+    gap: 5px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813
+}
+
+
+.example-testimonial-container > .example-container > .heading {
+    width: 100%;
+    max-width: 600px;
+}
+
+.example-testimonial-container > .example-container > .heading {
+    font-size: 0.8rem;
+    color: #68bbdb;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #68bbdb;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.example-testimonial-container > .example-container > .heading:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+}
+
+.example-testimonial-container > .example-container > .example.picture {
+    cursor: pointer;
+}
+
+.example-testimonial-container > .example-container > .picture.heading {grid-area: pichead;}
+.example-testimonial-container > .example-container > .picture.example {grid-area: picexam;}
+.example-testimonial-container > .example-container > .plain.heading {grid-area: plahead; margin-bottom: 30px;}
+.example-testimonial-container > .example-container > .plain.example {grid-area: plaexam;}
+
+.example-testimonial-container > .example-container > .picture.example > .testimonial {
+    place-items: center;
+}
+
+.preview-area > div > .testimonial-plain h1 {
+    font-size: 1rem;
+}
+
+.preview-area > div > .testimonial {
+    text-align: left;
+}
+
+.preview-area > div > .testimonial > .testimonial-content {
+    max-width: 480px;
+}
+
+.preview-area > div > .testimonial > .testimonial-content > .testimonial-quote {
+    font-size: 0.6rem;
+    margin: 0 !important;
+}
+
+.preview-area > div > .testimonial-plain > .testimonial-plain-content-container > .testimonial-plain-contact {
+    margin: 0 !important;
+}
+
+.preview-area > div > .testimonial > .testimonial-content > .testimonial-person,
+.preview-area > div > .testimonial > .testimonial-content > .testimonial-title,
+.preview-area > div > .testimonial-plain > .testimonial-plain-content-container > .testimonial-plain-contact  > .testimonial-plain-name {
+    text-align: left;
+}
+
+.preview-area > div {
+    display: flex;
+}
+
+
+@media (max-width: 1000px) {
+    .preview-area > div > .testimonial {
+        margin-bottom: 125px;
+    }
+
+    .example-testimonial-container > .example-container > .picture.example > .testimonial > .color-box {
+        height: 100%;
+        width: 100%;
+    }
+
+    .example-testimonial-container > .example-container > .picture.example > .testimonial > .testimonial-content,
+    .preview-area > div > .testimonial > .testimonial-content  {
+        height: 100%;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .preview-area > div > .testimonial > .testimonial-image {
+        width: 96%;
+    } 
+}

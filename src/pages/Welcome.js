@@ -1,5 +1,6 @@
 import React from "react"
 import "./css/welcome.css"
+import { Link } from "react-router-dom"
 export default function Welcome() {
     return (
         <div className="welcome-container">
@@ -34,7 +35,11 @@ export default function Welcome() {
             </h2>
             <div className="welcome-link">
                 <p>We invite you to explore our library, experiment with the components, and elevate your projects to the next level. Happy coding!</p>
-                <div className="welcome-link-button">COMPONENT GALLERY</div>
+                <Link 
+                    to={"/Gallery"}
+                >
+                    <div className="welcome-link-button">COMPONENT GALLERY</div>
+                </Link>
                 <svg className="arr1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 733.58 515.77" width="150px" height="150px" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
                     <path d="M1293.23,618.2L1091.6,527.66l45.4,84.15c0,0-177,86.19-389,23.19-57-27-196-100-163-356-109,623,566.51,403.92,566.51,403.92l-10,96.77L1293.23,618.2Z" transform="translate(-568.099976-278.140015)" fill="none" stroke="#fff" strokeWidth="8" strokeMiterlimit="10"/>
                 </svg>                

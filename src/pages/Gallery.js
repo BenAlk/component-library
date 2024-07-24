@@ -2,6 +2,7 @@ import React from 'react'
 import { Badge, Banner, Card, Testimonial, Toast, ToastTrigger, Tooltip } from '../component-library/ScrimbaComponents'
 import Component from "./component/display-component/display-component-index"
 import "./css/gallery.css"
+import { Link } from "react-router-dom"
 export default function Gallery() {
 return (
         <div className="gallery-container">
@@ -42,7 +43,7 @@ return (
                             Example 1 of the banner component.
                         </Banner.Text>
                     </Banner>
-                    <Banner variant="multi" bannerType="neutral">
+                    <Banner variant="multi" bannerType="info">
                         <Banner.Head>
                             Information Available!
                         </Banner.Head>
@@ -82,13 +83,17 @@ return (
                 </Component.Head>
                 <Component.Card>
                     <Testimonial 
-                        variant="picture" 
-                        person={{name: "Ben Alkureishi", 
-                                title: "Front-end Developer", 
-                                image: "/images/ben.jpg"
-                                }}
+                        style="picture"
+                        person={{
+                            name: "Ben Alkureishi", 
+                            title: "Front-end Developer", 
+                            image: "https://static.vecteezy.com/system/resources/thumbnails/002/275/847/small_2x/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg"
+                        }}
                     >
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed urna nulla vitae laoreet augue. Amet feugiat est integer dolor auctor adipiscing nunc urna, sit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed urna nulla vitae laoreet augue.
+                        Amet feugiat est integer dolor auctor adipiscing nunc urna,
+                        sit.
                     </Testimonial>
                 </Component.Card>
             </Component>
