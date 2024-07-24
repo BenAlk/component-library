@@ -8,7 +8,7 @@ import  Badges from "./pages/badges.js"
 import  Banners from "./pages/banners.js"
 import  Cards from "./pages/cards.js"
 import  Testimonials from "./pages/testimonials.js"
-// import Tooltips from "./pages/tooltips.js"
+import Tooltips from "./pages/tooltips.js"
 import  Toasts from "./pages/toasts.js"
 import  ScrollToTop from "./pages/component/ScrollToTop/ScrollToTop.js"
 
@@ -25,7 +25,7 @@ function App () {
                         <Route path="/Banners" element={<Banners />} />
                         <Route path="/Cards" element={<Cards />} />
                         <Route path="/Testimonials" element={<Testimonials />} />
-                        {/* <Route path="/Tooltips" element={<Tooltips />} /> */}
+                        <Route path="/Tooltips" element={<Tooltips />} />
                         <Route path="/Toasts" element={<Toasts />} />
                         <Route path="*" element={<div>Page not found</div>} />
                     </Route>

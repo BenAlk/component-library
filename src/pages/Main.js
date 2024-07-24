@@ -5,6 +5,7 @@ import Banners from "./banners"
 import Badges from "./badges"
 import Toasts from "./toasts"
 import Cards from "./cards"
+import Tooltips from "./tooltips"
 import Testimonials from "./testimonials"
 import "./css/main.css"
 
@@ -17,6 +18,6 @@ export default function Main() {
             {/* <Banners /> */}
             {/* <Toasts /> */}
             {/* <Cards /> */}
-            <Testimonials />
+            <Tooltips />
         </div>)
 }
