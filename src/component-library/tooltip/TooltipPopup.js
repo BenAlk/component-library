@@ -2,13 +2,13 @@ import React from 'react'
 import {TooltipContext} from "./Tooltip"
 import "./Tooltip.css"
 
-export default function TooltipPopup ({children}) {
+export default function TooltipPopup ({children, customCss}) {
 
     const {color, variant} = React.useContext(TooltipContext)
 
     return (
         <div className="tooltip-wrapper">
-                <div className={`tooltip ${color} ${variant}`}>
+                <div className={`tooltip ${color} ${variant} ${customCss}`}>
                     <div className="tooltip-icon icon">
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17 10V3C17 1.89543 16.1046 1 15 1H3C1.89543 1 1 1.89543 1 3V10M17 10V15C17 16.1046 16.1046 17 15 17H3C1.89543 17 1 16.1046 1 15V10M17 10H14.4142C14.149 10 13.8946 10.1054 13.7071 10.2929L11.2929 12.7071C11.1054 12.8946 10.851 13 10.5858 13H7.41421C7.149 13 6.89464 12.8946 6.70711 12.7071L4.29289 10.2929C4.10536 10.1054 3.851 10 3.58579 10H1" className="icon" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

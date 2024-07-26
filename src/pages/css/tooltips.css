@@ -1,0 +1,161 @@
+
+.example-tooltip-container {
+    max-width: 1400px;
+}
+
+.example-tooltip-container h2 {
+    font-size: 1rem;
+}
+
+.example-tooltip-container h2 span {
+    color: #68bbdb;
+    font-size: 1.25rem;
+}
+
+.example-tooltip-container > .example-container {
+    display: grid;
+    grid-template-columns: auto 0.1fr 0.1fr 0.5fr auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "..... ..... bold light ....."
+    "..... gray gray-bold gray-light ....."
+    "..... blue blue-bold blue-light ....."
+    "..... purple purple-bold purple-light ....."
+    "..... green green-bold green-light .....";
+    gap: 10px;
+    place-items: center;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d1d3d813;
+}
+
+.example-tooltip-container > .example-container > .example,
+.example-tooltip-container > .example-container > .heading {
+    width: 100%;
+    max-width: 295px;
+}
+
+.example-tooltip-container > .example-container > .heading {
+    font-size: 0.8rem;
+    color: #68bbdb;
+    text-align: center;
+    padding: 4px 8px;
+    border: 1px solid #68bbdb;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.example-tooltip-container > .example-container > .heading:hover {
+    background-color: rgba(90, 161, 189, 0.123);
+}
+
+.example-tooltip-container > .example-container > .gray-bold {grid-area: gray-bold; display:flex; justify-content: center; align-items: center;}
+.example-tooltip-container > .example-container > .gray-light {grid-area: gray-light; display:flex; justify-content: center; align-items: center;}
+
+.example-tooltip-container > .example-container > .blue-bold {grid-area: blue-bold; display:flex; justify-content: center; align-items: center;}
+.example-tooltip-container > .example-container > .blue-light {grid-area: blue-light; display:flex; justify-content: center; align-items: center;}
+
+.example-tooltip-container > .example-container > .purple-bold {grid-area: purple-bold; display:flex; justify-content: center; align-items: center;}
+.example-tooltip-container > .example-container > .purple-light {grid-area: purple-light; display:flex; justify-content: center; align-items: center;}
+
+.example-tooltip-container > .example-container > .green-bold {grid-area: green-bold; display:flex; justify-content: center; align-items: center;}
+.example-tooltip-container > .example-container > .green-light {grid-area: green-light; display:flex; justify-content: center; align-items: center;}
+
+.example-tooltip-container > .example-container > .bold-1 {grid-area: bold}
+.example-tooltip-container > .example-container > .light-1 {grid-area: light}
+
+.example-tooltip-container > .example-container > .gray-text {grid-area: gray}
+.example-tooltip-container > .example-container > .blue-text {grid-area: blue}
+.example-tooltip-container > .example-container > .purple-text {grid-area: purple}
+.example-tooltip-container > .example-container > .green-text {grid-area: green}
+
+.example-tooltip-container > .example-container > .bold-2 {display: none;}
+.example-tooltip-container > .example-container > .light-2 {display: none;}
+.example-tooltip-container > .example-container > .bold-3 {display: none;}
+.example-tooltip-container > .example-container > .light-3 {display: none;}
+.example-tooltip-container > .example-container > .bold-4 {display: none;}
+.example-tooltip-container > .example-container > .light-4 {display: none;}
+
+
+.example-tooltip-visible {
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+
+    .example-tooltip-container > .example-container {
+        grid-template-columns: auto 0.2fr .5fr auto;
+        grid-template-areas:
+        ".... .... gray"
+        ".... bold1 gray-bold"
+        ".... light1 gray-light"
+        ".... .... blue"
+        ".... bold2 blue-bold"
+        ".... light2 blue-light"
+        ".... .... purple"
+        ".... bold3 purple-bold"
+        ".... light3 purple-light"
+        ".... .... green"
+        ".... bold4 green-bold"
+        ".... light4 green-light"
+
+    }
+    .example-tooltip-container > .example-container > .bold-1 {grid-area: bold1}
+    .example-tooltip-container > .example-container > .light-1 {grid-area: light1}
+    .example-tooltip-container > .example-container > .bold-2 {display: block; grid-area: bold2;}
+    .example-tooltip-container > .example-container > .light-2 {display: block; grid-area: light2;}
+    .example-tooltip-container > .example-container > .bold-3 {display: block; grid-area: bold3;}
+    .example-tooltip-container > .example-container > .light-3 {display: block; grid-area: light3;}
+    .example-tooltip-container > .example-container > .bold-4 {display: block; grid-area: bold4;}
+    .example-tooltip-container > .example-container > .light-4 {display: block; grid-area: light4;}
+}
+
+@media (max-width: 450px) {
+
+    .example-tooltip-container > .example-container {
+        grid-template-columns: auto 0.2fr auto auto;
+        grid-template-areas:
+        ".... .... gray ...."
+        ".... bold1 gray-bold .... "
+        ".... light1 gray-light ...."
+        ".... .... blue ...."
+        ".... bold2 blue-bold ...."
+        ".... light2 blue-light ...."
+        ".... .... purple ...."
+        ".... bold3 purple-bold ...."
+        ".... light3 purple-light ...."
+        ".... .... green ...."
+        ".... bold4 green-bold ...."
+        ".... light4 green-light ....";
+    }
+
+    .advanced-code .code-playground pre {
+        font-size: 0.5rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .tooltip { 
+        padding: 4px;
+        min-width: 200px;
+    }
+    .tooltip-icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 6px;
+    }
+    .tooltip-icon > svg {
+        height: 9px;
+        width: 9px;
+    }
+    .tooltip-title {
+        font-size: 0.6rem;
+    }
+    .tooltip-text {
+        font-size: 0.6rem;
+    }
+
+}

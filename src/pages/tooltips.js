@@ -18,22 +18,31 @@ export default function Tooltips() {
 /* Generate example tooltips */
 
     const exampleTooltips = tooltipData.map((item, index) => {
+        console.log(`${item.variant} ${item.color}`)
         return (
-            <div key={item.key} className={`${item.color}-${item.variant} example`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.variant}`})}><Tooltip color={item.color} variant={item.variant} /* style={customeTooltipStyle} */>Example</Tooltip></div>
+            <div key={item.key} className={`${item.color}-${item.variant} example`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.variant}`})}><Tooltip color={item.color} variant={item.variant}><Tooltip.Popup  customCss={"example-tooltip-visible"}><Tooltip.Title>Tooltip Example</Tooltip.Title><Tooltip.Text>Example tool tips for color schemes.</Tooltip.Text></Tooltip.Popup></Tooltip></div>
         )
     })
 
 /* Generate color and variant headers */
-    const colorHeads = tooltipData.slice(0, 8).map((item, index) => {
-        return (
-            <div key={index} className={`${item.color}-text heading`}>{capitalizeFirstLetter(item.color)}</div>
-        )
-    })
+    const colorHeads = tooltipData
+        .slice(0, 8)
+        .filter((_, index) => index % 2 !== 0) // Filter to keep only odd indices
+        .map((item, index) => {
+            return (
+                <div key={index} className={`${item.color}-text heading`}>
+                    {capitalizeFirstLetter(item.color)}
+                </div>
+            );
+        });
 
-    const styleHeads = tooltipData.slice(7, 9).map((item, index) => {
+    const styleHeads = tooltipData.slice(0, 2).map((item, index) => {
         return (
             <React.Fragment key={index}>
-                <div className={`${item.variant} heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-1 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-2 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-3 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-4 heading`}>{capitalizeFirstLetter(item.variant)}</div>
             </React.Fragment>
         )
     })
