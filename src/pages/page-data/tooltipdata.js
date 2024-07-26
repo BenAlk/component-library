@@ -64,7 +64,7 @@ const importCode = `
 const basicCode = (exampleColor, exampleVariant) => {
     return `
         <Tooltip color={"${exampleColor}"} variant={"${exampleVariant}"}>
-            <Tooltip.Trigger styleClassName="custom-trigger-style">
+            <Tooltip.Trigger>
                 Hover me to see the tooltip.
             </Tooltip.Trigger>
             <Tooltip.Popup>
