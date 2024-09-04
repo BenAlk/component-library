@@ -347,6 +347,12 @@
     }
 }
 
+@media (max-width: 1000px) {
+    .testimonial-content {
+        height: auto;
+    }
+}
+
 
 @media (max-width: 750px){
 
