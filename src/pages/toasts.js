@@ -29,11 +29,13 @@ export default function Toasts () {
 /* Generate example toasts */
 
     const exampleToasts =  toastData.map((toast, index) => (
-        <div key={index} className={`toast toast-${toast.variant} no-effects`} onClick={() => handleChange({variant: `${toast.variant}`, title: `${toast.title}`, text: `${toast.text}`})}>
+        <div key={index} className={`toast-example-container toast-${toast.variant} ${exampleVariant === toast.variant ? "flash-border" : ""}`}>
+        <div key={index} className={`toast toast-${toast.variant} no-effects }`} onClick={() => handleChange({variant: `${toast.variant}`, title: `${toast.title}`, text: `${toast.text}`})}>
             <div className="toast-icon"><img src={toastIcons[toast.variant]} alt={`${toast.variant} logo`}/></div>
             <div className="toast-title">{toast.title}</div>
             <div className="toast-text">{toast.text}</div>
             <div className="toast-close">X</div>
+        </div>
         </div>
     ))
 
@@ -41,7 +43,7 @@ export default function Toasts () {
     const variantHeads = toastData.slice(0, 4).map((item, index) => {
         return (
             <React.Fragment key={index}>
-                <div className={`${item.variant}-text heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-text heading ${exampleVariant === item.variant ? "selected-toast" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
             </React.Fragment>
         )
     })

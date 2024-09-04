@@ -7,30 +7,38 @@ import ComponentPage from './component/component-page/component-page-index'
 export default function Badges () {
     const [exampleColor, setExampleColor] = React.useState("")
     const [exampleVariant, setExampleVariant] = React.useState("")
+    const [selectedKey, setSelectedKey] = React.useState(null)
 
-    function handleChange(e) {
+    function handleChange(e, key) {
     setExampleColor(e.color)
     setExampleVariant(e.variant)
+    setSelectedKey(key)
 }
 
 /* Generate example badges */    
     const exampleBadges = badgeData.map(item => {
+        const isSelected = selectedKey === item.key
+        const cellClass = isSelected ? "flash-border" : ""
         return (
-            <div key={item.key} className={`${item.color}-${item.style} example`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.style}`})}><Badge color={item.color} variant={item.style}style={customBadgeStyle}>Example</Badge></div>
+            <div key={item.key} className={`${item.color}-${item.style} example ${cellClass}`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.style}`}, item.key)}><Badge color={item.color} variant={item.style}style={customBadgeStyle}>Example</Badge></div>
         )
     })
 /* Generate color and style headers */
     const colorHeads = badgeData.slice(0, 8).map((item, index) => {
+        const isSelected = exampleColor === item.color
+        const colorClass = isSelected ? "selected-badge" : ""
         return (
-            <div key={index}className={`${item.color}-text heading`}>{capitalizeFirstLetter(item.color)}</div>
+            <div key={index}className={`${item.color}-text heading ${colorClass}`}>{capitalizeFirstLetter(item.color)}</div>
         )
     })
 
     const styleHeads = badgeData.slice(7, 9).map((item, index) => {
+        const isSelected = exampleVariant === item.style
         return (
             <React.Fragment key={index}>
-                <div className={`${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
-                <div className={`${item.style}${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
+                <div className={`${item.style} heading ${isSelected ? "selected-badge" : ""}`}>{capitalizeFirstLetter(item.style)}</div>
+                <div className={`${item.style}-left heading ${isSelected && exampleColor === "gray" ? "selected-badge" : isSelected && exampleColor === "yellow" ? "selected-badge" : isSelected && exampleColor === "blue" ? "selected-badge" : isSelected && exampleColor === "purple" ? "selected-badge" : "" }`}>{capitalizeFirstLetter(item.style)}</div>
+                <div className={`${item.style}-right heading ${isSelected && exampleColor === "red" ? "selected-badge" : isSelected && exampleColor === "green" ? "selected-badge" : isSelected && exampleColor === "indigo" ? "selected-badge" : isSelected && exampleColor === "pink" ? "selected-badge" : "" }`}>{capitalizeFirstLetter(item.style)}</div>
             </React.Fragment>
         )
     })

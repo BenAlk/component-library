@@ -8,19 +8,22 @@ import ComponentPage from "./component/component-page/component-page-index"
 export default function Tooltips() {
     const [exampleColor, setExampleColor] = React.useState("")
     const [exampleVariant, setExampleVariant] = React.useState("")
+    const [selectedKey, setSelectedKey] = React.useState(null)
 
-    function handleChange(e) {
+    function handleChange(e, key) {
         setExampleColor(e.color)
         setExampleVariant(e.variant)
+        setSelectedKey(key)
     }
 
 
 /* Generate example tooltips */
 
     const exampleTooltips = tooltipData.map((item, index) => {
-        console.log(`${item.variant} ${item.color}`)
+        const isSelected = selectedKey === item.key
+        const cellClass = isSelected ? "flash-border" : ""
         return (
-            <div key={item.key} className={`${item.color}-${item.variant} example`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.variant}`})}><Tooltip color={item.color} variant={item.variant}><Tooltip.Popup  customCss={"example-tooltip-visible"}><Tooltip.Title>Tooltip Example</Tooltip.Title><Tooltip.Text>Example tool tips for color schemes.</Tooltip.Text></Tooltip.Popup></Tooltip></div>
+            <div key={item.key} className={`${item.color}-${item.variant} example ${cellClass}`} onClick={() => handleChange({color: `${item.color}`, variant: `${item.variant}`}, item.key)}><Tooltip color={item.color} variant={item.variant} disableClose={true}><Tooltip.Popup  customCss={"example-tooltip-visible"}><Tooltip.Title>Tooltip Example</Tooltip.Title><Tooltip.Text>Example tool tips for color schemes.</Tooltip.Text></Tooltip.Popup></Tooltip></div>
         )
     })
 
@@ -29,20 +32,24 @@ export default function Tooltips() {
         .slice(0, 8)
         .filter((_, index) => index % 2 !== 0) // Filter to keep only odd indices
         .map((item, index) => {
+            const isSelected = exampleColor === item.color
+            const colorClass = isSelected ? "selected-tooltip" : ""
             return (
-                <div key={index} className={`${item.color}-text heading`}>
+                <div key={index} className={`${item.color}-text heading ${colorClass}`}>
                     {capitalizeFirstLetter(item.color)}
                 </div>
             );
         });
 
     const styleHeads = tooltipData.slice(0, 2).map((item, index) => {
+        const isSelected = exampleVariant === item.variant
         return (
             <React.Fragment key={index}>
-                <div className={`${item.variant}-1 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-                <div className={`${item.variant}-2 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-                <div className={`${item.variant}-3 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-                <div className={`${item.variant}-4 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-0 heading ${isSelected ? "selected-tooltip" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-1 heading ${isSelected && exampleColor === "gray" ? "selected-tooltip" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-2 heading ${isSelected && exampleColor === "blue" ? "selected-tooltip" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-3 heading ${isSelected && exampleColor === "purple" ? "selected-tooltip" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+                <div className={`${item.variant}-4 heading ${isSelected && exampleColor === "green" ? "selected-tooltip" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
             </React.Fragment>
         )
     })

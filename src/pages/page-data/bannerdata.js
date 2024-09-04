@@ -60,10 +60,10 @@ const bannerData =  [
 const playgroundCode = `
         <Banner 
             variant="multi" 
-            bannerType="error" 
-            style={{backgroundColor: "black"}} 
-            headStyle={{color: "red"}} 
-            textStyle={{color: "purple"}}
+            bannerType="info" 
+            style={{backgroundColor: "lightblue"}} 
+            headStyle={{color: "black"}} 
+            textStyle={{color: "black"}}
         >
             <Banner.Head>
                 Head Text Goes Here

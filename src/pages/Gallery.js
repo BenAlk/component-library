@@ -3,6 +3,7 @@ import { Badge, Banner, Card, Testimonial, Toast, ToastTrigger, Tooltip } from '
 import Component from "./component/display-component/display-component-index"
 import "./css/gallery.css"
 import { Link } from "react-router-dom"
+import clickTest from "./assets/click-test.png"
 export default function Gallery() {
 return (
         <div className="gallery-container">
@@ -17,12 +18,12 @@ return (
                     </Component.Intro>
                 </Component.Head>
                 <Component.Card>
-                    <Badge color={"red"} variant={"square"}>Example 1</Badge>
-                    <Badge color={"green"} variant={"square"}>Example 2</Badge>
-                    <Badge color={"blue"} variant={"square"}>Example 3</Badge>
-                    <Badge color={"gray"} variant={"pill"}>Example 4</Badge>
-                    <Badge color={"indigo"} variant={"pill"}>Example 5</Badge>
-                    <Badge color={"yellow"} variant={"pill"}>Example 6</Badge>
+                    <Badge color={"red"} variant={"square"}>Example</Badge>
+                    <Badge color={"green"} variant={"square"}>Example</Badge>
+                    <Badge color={"blue"} variant={"square"}>Example</Badge>
+                    <Badge color={"gray"} variant={"pill"}>Example</Badge>
+                    <Badge color={"indigo"} variant={"pill"}>Example</Badge>
+                    <Badge color={"yellow"} variant={"pill"}>Example</Badge>
                 </Component.Card>
             </Component>
 
@@ -109,18 +110,12 @@ return (
                 <Component.Card>
                     <Toast>
                         <ToastTrigger 
-                            styleClassName="gallery-link-button component-test-button" 
+                            styleClassName="click-test-button" 
                             title="Success" text="Example Success Toast" 
                             variant="success"
                         >
-                                Test the success toast
-                        </ToastTrigger>
-                        <ToastTrigger 
-                            styleClassName="gallery-link-button component-test-button" 
-                            title="Error" text="Example Error Toast" 
-                            variant="error"
-                        >
-                            Test the error toast
+                            Click to test!
+                            <img src={clickTest} alt="Click to test toast" />
                         </ToastTrigger>
                     </Toast>
                 </Component.Card>
@@ -136,8 +131,9 @@ return (
                 </Component.Head>
                 <Component.Card>
                     <Tooltip color="blue" variant="bold">
-                        <Tooltip.Trigger styleClassName="gallery-link-button component-test-button">
-                            Hover me.
+                        <Tooltip.Trigger styleClassName="click-test-button">
+                            Hover to test!
+                            <img src={clickTest} alt="Hover to test tooltip" />
                         </Tooltip.Trigger>
                         <Tooltip.Popup>
                             <Tooltip.Title>

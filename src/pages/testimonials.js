@@ -8,22 +8,24 @@ export default function Testimonials () {
 
     const [exampleStyle, setExampleStyle] = React.useState("")
 
-    function handleChange(e) {
+    function handleChange(e, key) {
         setExampleStyle(e.style)
     }
 
     /* Generate example testimonials */    
     const exampleTestimonials = testimonialData.map((item, index) => {
         return (
-            <div key={`${item.style}-${index}`} className={`${item.style} example`} onClick={() => handleChange({style: `${item.style}`})}><Testimonial person={item.person} style={item.style}>Body of the testimonial goes here</Testimonial></div>
+            <div key={`${item.style}-${index}`} className={`${item.style} example ${exampleStyle === item.style ? "flash-border" : ""}`} onClick={() => handleChange({style: `${item.style}`}, item.key)}><Testimonial person={item.person} style={item.style}>Body of the testimonial goes here</Testimonial></div>
         )
     })
 
     /* Generate Style Headers */
     const styleHeads = testimonialData.map((item, index) => {
+            const isSelected = exampleStyle === item.style
+            const styleClass = isSelected ? "selected-testimonial" : ""
         return (
             <React.Fragment key={index}>
-                <div className={`${item.style} heading`}>{capitalizeFirstLetter(item.style)}</div>
+                <div className={`${item.style} heading ${styleClass}`}>{capitalizeFirstLetter(item.style)}</div>
             </React.Fragment>
         )
     })

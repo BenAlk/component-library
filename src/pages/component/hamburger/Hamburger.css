@@ -1,0 +1,22 @@
+.hamburger-menu{
+    padding-top: 5px;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+}
+
+.rotate-90 {
+    transform : rotate(90deg);
+    transition: transform 0.5s ease;
+}
+
+@keyframes hamburgerFlash {
+    0% {stroke:white }
+    25% {stroke:#68bbdb }
+    50% {stroke:white }
+    75% {stroke:#68bbdb }
+    100% {stroke:white }
+}
+
+.hamburger-menu .hamburger .hamburger-path{
+    animation : hamburgerFlash 5s infinite;
+}

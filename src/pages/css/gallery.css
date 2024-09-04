@@ -181,6 +181,10 @@
     grid-area: tstexpl;
 }
 
+.testimonial-content {
+    height: 135px;
+}
+
 /* Toast Component Container Specific Styles */
 
 .gallery-toasts {
@@ -206,6 +210,16 @@
 
 .gallery-toasts a {
     grid-area: tosexpl;
+}
+
+.click-test-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.click-test-button img {
+    height: 100px;
+    width: 100px;
 }
 
 /* Tooltip Component Container Specific Styles */
@@ -256,7 +270,9 @@
 
 .gallery-toasts .gallery-toasts-show-examples .toast-trigger {
     margin: 20px 0 0 0;
+    border: none;
 } 
+
 
 .gallery-toasts .component-test-button,
 .gallery-tooltips .component-test-button {
@@ -297,8 +313,12 @@
         grid-template-rows: 200px 200px;
         grid-template-areas:
         "tstshow tstshow ....... tsttext tsttext"
-        "tstshow tstshow ....... tstexpl tstexpl"
+        "tstshow tstshow ....... tstexpl tstexpl";
     }
+
+    .gallery-testimonials .testimonial {
+        scale: 60%;
+    } 
 
     .gallery-toasts{
         grid-template-areas:
@@ -331,6 +351,7 @@
     }
 }
 
+
 @media (max-width: 750px){
 
     .gallery-container h1, .outro  {
@@ -360,6 +381,8 @@
     
     .gallery-testimonials .gallery-testimonials-show-examples {
         padding-top: 30px;
+        max-width: 100px;
+        max-height: 300px;
     }
 
     .gallery-toasts .gallery-toasts-show-examples,
@@ -382,9 +405,17 @@
         "tstshow"
         "tstexpl";
         place-items: center;
+        width: 100%;
     }
+
 
     .gallery-cards {
         padding-bottom: 60px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1400px) {
+    .gallery-testimonials {
+        max-height: 350px;
     }
 }

@@ -25,6 +25,11 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #d1d3d813;
 }
+.example-toast-container > .example-container > .toast-example-container{
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    padding: 2px;
+}
 
 .example-toast-container > .example-container > .example,
 .example-toast-container > .example-container > .heading{
@@ -103,4 +108,21 @@ div .toast-trigger.undefined {
     .import-code  pre  .token-line {
         font-size: 0.5rem;
     }
+}
+
+@keyframes flashBorder {
+    0% { border-color: rgba(90, 161, 189, 0.123); }
+    25% { border-color: white; }
+    50% { border-color: rgba(90, 161, 189, 0.123); }
+    75% { border-color: white; }
+    100% { border-color: rgba(90, 161, 189, 0.123); }
+}
+
+.selected-toast {
+    background-color: #68bbdb;
+    color: #16212c !important;
+}
+
+.flash-border {
+    animation: flashBorder 3s linear infinite;
 }

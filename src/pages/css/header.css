@@ -8,8 +8,9 @@
     display: flex;
     justify-content:center;
     align-items: center;
-    padding: 20px 5px;
+    padding: 20px 5px 0;
     gap : 20px;
+    position: relative;
 }
 
 .scrimba-logo {
@@ -24,7 +25,35 @@
     color: white;
     margin: 0;
     font-weight: 400;
+    text-decoration: none;
+}
 
+/* ======== Nav Menu ======= */
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    opacity: 0%;
+    transform: translateX(-250px);
+    transition: transform 0.5s ease, opacity 0.5s ease, padding-bottom 0.5s ease;
+    user-select: none;
+    pointer-events: none;
+}
+
+nav a {
+    color: #68bbdb;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+}
+
+.active {
+    opacity: 100%;
+    transform: translateX(0px);
+    pointer-events: auto;
+    padding-bottom: 10px;
 }
 
 @media (max-width: 500px) {
@@ -37,5 +66,14 @@
     }
     .header-container svg {
         scale: 0.75;
+    }
+    nav {
+        scale: 0.75;
+    }
+}
+
+@media (max-width: 380px) {
+    nav a {
+        font-size: 0.75rem;
     }
 }

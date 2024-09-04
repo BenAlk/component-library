@@ -99,6 +99,20 @@
     padding-left: 40px;
 }
 
+.welcome-link .arr1 path,
+.welcome-link .arr2 path {
+    animation: arrowFlash 5s linear infinite;
+}
+
+@keyframes arrowFlash {
+    0% { fill: #68bbdb; stroke:white }
+    25% { fill: rgba(90, 161, 189, 0.123); stroke:#68bbdb }
+    50% { fill: #68bbdb; stroke:white }
+    75% { fill: rgba(90, 161, 189, 0.123); stroke:#68bbdb }
+    100% { fill: #68bbdb; stroke:white }
+}
+
+
 /* Media Queries */
 
 @media (max-width: 1200px) {

@@ -16,6 +16,20 @@
     border-bottom: 1px solid #d1d3d813
 }
 
+.example-testimonial-container > .example-container > .example.picture,
+.example-testimonial-container > .example-container > .example.plain
+{
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+}
+.example-testimonial-container > .example-container > .example.picture {
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.example-testimonial-container > .example-container > .example.plain{
+    padding: 20px;
+}
 
 .example-testimonial-container > .example-container > .heading {
     width: 100%;
@@ -37,13 +51,14 @@
     background-color: rgba(90, 161, 189, 0.123);
 }
 
-.example-testimonial-container > .example-container > .example.picture {
+.example-testimonial-container > .example-container > .example.picture,
+.example-testimonial-container > .example-container > .example.plain{
     cursor: pointer;
 }
 
 .example-testimonial-container > .example-container > .picture.heading {grid-area: pichead;}
 .example-testimonial-container > .example-container > .picture.example {grid-area: picexam;}
-.example-testimonial-container > .example-container > .plain.heading {grid-area: plahead; margin-bottom: 30px;}
+.example-testimonial-container > .example-container > .plain.heading {grid-area: plahead;}
 .example-testimonial-container > .example-container > .plain.example {grid-area: plaexam;}
 
 .example-testimonial-container > .example-container > .picture.example > .testimonial {
@@ -87,6 +102,15 @@
         margin-bottom: 125px;
     }
 
+    .example-testimonial-container > .example-container > .picture.example {
+        height: 350px;
+    }
+
+    .example-testimonial-container > .example-container > .picture.example > .testimonial {
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+
     .example-testimonial-container > .example-container > .picture.example > .testimonial > .color-box {
         height: 100%;
         width: 100%;
@@ -102,4 +126,29 @@
     .preview-area > div > .testimonial > .testimonial-image {
         width: 96%;
     } 
+}
+
+
+@media (max-width: 445px) {
+    .example-testimonial-container > .example-container {
+        padding-left: 30px;
+    }
+
+}
+
+@keyframes flashBorder {
+    0% { border-color: rgba(90, 161, 189, 0.123); }
+    25% { border-color: white; }
+    50% { border-color: rgba(90, 161, 189, 0.123); }
+    75% { border-color: white; }
+    100% { border-color: rgba(90, 161, 189, 0.123); }
+}
+
+.selected-testimonial {
+    background-color: #68bbdb;
+    color: #16212c !important;
+}
+
+.flash-border {
+    animation: flashBorder 3s linear infinite;
 }

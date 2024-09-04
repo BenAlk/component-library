@@ -36,12 +36,15 @@
     background-color: #16212C;
 }
 
+
+
 .preview-area pre {
     background-color: black;
     color: red;
     padding: 20px;
     margin-top: -10px;
 }
+
 
 @media (min-width: 1150px) {
     .code-playground.import pre{

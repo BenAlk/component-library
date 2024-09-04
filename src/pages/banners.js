@@ -8,16 +8,20 @@ import "./css/banners.css"
 export default function Banners () {
     const [exampleBannerType, setExampleBannerType] = React.useState("")
     const [exampleVariant, setExampleVariant] = React.useState("")
+    const [selectedKey, setSelectedKey] = React.useState(null)
 
-    function handleChange(e) {
+    function handleChange(e, key) {
         setExampleBannerType(e.bannerType)
         setExampleVariant(e.variant)
+        setSelectedKey(key)
     }
 
     
     const exampleBanners = bannerData.map(item => {
+        const isSelected = selectedKey === item.key
+        const cellClass = isSelected ? "flash-border" : ""
         return (
-            <div key={item.key} className={`${item.variant}-${item.bannerType} example` } onClick={() => handleChange({bannerType: `${item.bannerType}`, variant: `${item.variant}`})}>
+            <div key={item.key} className={`${item.variant}-${item.bannerType} example ${cellClass}` } onClick={() => handleChange({bannerType: `${item.bannerType}`, variant: `${item.variant}`}, item.key)}>
                 <Banner variant={item.variant} bannerType={item.bannerType} style={customBannerStyle}>
                     <Banner.Head>
                         {item.head}
@@ -33,18 +37,22 @@ export default function Banners () {
     
 
     const bannerVariantHeads = bannerData.slice(3,5).map((item, index) => {
+        const isSelected = exampleVariant === item.variant
         return (<React.Fragment key={`variant-${index}`}>
-            <div key={`head-${index}-1`} className={`${item.variant}1 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-            <div key={`head-${index}-2`} className={`${item.variant}2 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-            <div key={`head-${index}-3`} className={`${item.variant}3 heading`}>{capitalizeFirstLetter(item.variant)}</div>
-            <div key={`head-${index}-4`} className={`${item.variant}4 heading`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}-1`} className={`${item.variant} heading ${isSelected ? "selected-banner" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}-2`} className={`${item.variant}1 heading ${isSelected && exampleBannerType === "success" ? "selected-banner" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}-3`} className={`${item.variant}2 heading ${isSelected && exampleBannerType === "info" ? "selected-banner" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}-4`} className={`${item.variant}3 heading ${isSelected && exampleBannerType === "attention" ? "selected-banner" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
+            <div key={`head-${index}-5`} className={`${item.variant}4 heading ${isSelected && exampleBannerType === "error" ? "selected-banner" : ""}`}>{capitalizeFirstLetter(item.variant)}</div>
             </React.Fragment>
         )
     })
 
     const bannerTypeHeads = bannerData.slice(0,4).map((item, index) => {
+            const isSelected = exampleBannerType === item.bannerType
+            const typeClass = isSelected ? "selected-banner" : ""
         return (
-            <div key={`type-${index}`} className={`${item.bannerType}-text heading`}>{capitalizeFirstLetter(item.bannerType)}</div>
+            <div key={`type-${index}`} className={`${item.bannerType}-text heading ${typeClass}`}>{capitalizeFirstLetter(item.bannerType)}</div>
         )
     })
 

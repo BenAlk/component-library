@@ -11,7 +11,6 @@ export default function Component({component, children}){
 
     const captialComponent = component.toUpperCase()
     const linkComponent = capitalizeFirstLetter(component)
-    console.log(linkComponent)
 
     // Passing the component as a prop to the Link component for navigation
 return (

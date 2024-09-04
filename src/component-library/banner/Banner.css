@@ -80,12 +80,17 @@
 
 .banner-mess {
     grid-area: mess;
+    place-self: start;
     font-size: 14px;
 }
 
 .banner-mess p {
-    text-align: start;
+    text-align: left;
     padding: 0;
+    margin: 0;
+}
+
+.preview-area .banner-mess {
     margin: 0;
 }
 

@@ -22,6 +22,12 @@
     border-bottom: 1px solid #d1d3d813;
 }
 
+.example-banner-container > .example-container > .example{
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    padding: 2px;
+}
+
 
 .example-banner-container > .example-container > .example,
 .example-banner-container > .example-container > .heading {
@@ -46,22 +52,24 @@
 .example-banner-container > .example-container > .multi-info {grid-area: i-multi;}
 .example-banner-container > .example-container > .multi-attention {grid-area: a-multi;}
 .example-banner-container > .example-container > .multi-error {grid-area: e-multi;}
-.example-banner-container > .example-container > .single-success {grid-area: s-single;}
-.example-banner-container > .example-container > .single-info {grid-area: i-single;}
-.example-banner-container > .example-container > .single-attention {grid-area: a-single;}
-.example-banner-container > .example-container > .single-error {grid-area: e-single;}
+.example-banner-container > .example-container > .single-success {grid-area: s-single;place-self: center !important }
+.example-banner-container > .example-container > .single-info {grid-area: i-single; place-self: center !important }
+.example-banner-container > .example-container > .single-attention {grid-area: a-single; place-self: center !important}
+.example-banner-container > .example-container > .single-error {grid-area: e-single; place-self: center !important }
 
 .example-banner-container > .example-container > .example {place-self: start;}
 .example-banner-container > .example-container > .heading {place-self: start;}
 
-.example-banner-container > .example-container > .multi1.heading { grid-area: multi;}
-.example-banner-container > .example-container > .single1.heading { grid-area: single;}
+.example-banner-container > .example-container > .multi.heading { grid-area: multi;}
+.example-banner-container > .example-container > .single.heading { grid-area: single;}
 
-.example-banner-container > .example-container > .success-text { grid-area: success;}
-.example-banner-container > .example-container > .info-text { grid-area: info;}
-.example-banner-container > .example-container > .attention-text { grid-area: attention;}
-.example-banner-container > .example-container > .error-text { grid-area: error;}
+.example-banner-container > .example-container > .success-text { grid-area: success; place-self: center !important}
+.example-banner-container > .example-container > .info-text { grid-area: info; place-self: center !important}
+.example-banner-container > .example-container > .attention-text { grid-area: attention;place-self: center !important}
+.example-banner-container > .example-container > .error-text { grid-area: error; place-self: center !important}
 
+.example-banner-container > .example-container > .multi1.heading,
+.example-banner-container > .example-container > .single1.heading,
 .example-banner-container > .example-container > .multi2.heading,
 .example-banner-container > .example-container > .multi3.heading,
 .example-banner-container > .example-container > .multi4.heading,
@@ -70,7 +78,6 @@
 .example-banner-container > .example-container > .single4.heading {
     display: none;
 }
-
 
 @media (max-width: 500px){
     .example-banner-container > .example-container {
@@ -91,17 +98,42 @@
         "multi4 e-multi .....";
     }
 
+    .example-banner-container > .example-container > .multi.heading { display: none;}
+    .example-banner-container > .example-container > .single.heading { display: none;}
+    .example-banner-container > .example-container > .multi1.heading { display: block; grid-area: multi;}
     .example-banner-container > .example-container > .multi2.heading { display: block; grid-area: multi2;}
     .example-banner-container > .example-container > .multi3.heading { display: block; grid-area: multi3;}
     .example-banner-container > .example-container > .multi4.heading { display: block; grid-area: multi4;}
+    .example-banner-container > .example-container > .single1.heading { display: block; grid-area: single}
     .example-banner-container > .example-container > .single2.heading { display: block; grid-area: single2;}
     .example-banner-container > .example-container > .single3.heading { display: block; grid-area: single3;}
     .example-banner-container > .example-container > .single4.heading { display: block; grid-area: single4;}
 
-    .example.banner-container > .example-container > .multi1.heading,
+    .example-banner-container > .example-container > .single1.heading,
+    .example-banner-container > .example-container > .single2.heading,
+    .example-banner-container > .example-container > .single3.heading,
+    .example-banner-container > .example-container > .single4.heading,
+    .example-banner-container > .example-container > .multi1.heading,
     .example-banner-container > .example-container > .multi2.heading,
     .example-banner-container > .example-container > .multi3.heading,
     .example-banner-container > .example-container > .multi4.heading {
-        place-self:center;
+        place-self:center !important;
     }
+}
+
+@keyframes flashBorder {
+    0% { border-color: rgba(90, 161, 189, 0.123); }
+    25% { border-color: white; }
+    50% { border-color: rgba(90, 161, 189, 0.123); }
+    75% { border-color: white; }
+    100% { border-color: rgba(90, 161, 189, 0.123); }
+}
+
+.selected-banner {
+    background-color: #68bbdb;
+    color: #16212c !important;
+}
+
+.flash-border {
+    animation: flashBorder 3s linear infinite;
 }

@@ -27,7 +27,7 @@ const tooltipData = [
     {
         key: "6",
         color: "purple",
-        variant: "light  "
+        variant: "light"
     },
     {
         key: "7",
@@ -51,7 +51,7 @@ const playgroundCode = `
                     How to use!
                 </Tooltip.Title>
                 <Tooltip.Text>
-                    Wrap whatever you want to be the trigger for the tool tip in the Tooltip.Trigger component.
+                    Tooltip main content should be inserted here.
                 </Tooltip.Text>
             </Tooltip.Popup>
         </Tooltip>
@@ -72,8 +72,7 @@ const basicCode = (exampleColor, exampleVariant) => {
                     How to use!
                 </Tooltip.Title>
                 <Tooltip.Text>
-                    Wrap whatever you want to be the trigger for 
-                    the tool tip in the Tooltip.Trigger component.
+                    Tooltip main content should be inserted here.
                 </Tooltip.Text>
             </Tooltip.Popup>
         </Tooltip>
@@ -90,8 +89,7 @@ const advancedCode = `
                     How to use!
                 </Tooltip.Title>
                 <Tooltip.Text>
-                    Wrap whatever you want to be the trigger 
-                    for the tool tip in the Tooltip.Trigger component.
+                    Tooltip main content should be inserted here.
                 </Tooltip.Text>
             </Tooltip.Popup>
         </Tooltip>

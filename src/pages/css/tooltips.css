@@ -27,7 +27,11 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #d1d3d813;
 }
-
+.example-tooltip-container > .example-container > .example{
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    padding: 2px;
+}
 .example-tooltip-container > .example-container > .example,
 .example-tooltip-container > .example-container > .heading {
     width: 100%;
@@ -40,7 +44,7 @@
     text-align: center;
     padding: 4px 8px;
     border: 1px solid #68bbdb;
-    border-radius: 2px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -60,14 +64,16 @@
 .example-tooltip-container > .example-container > .green-bold {grid-area: green-bold; display:flex; justify-content: center; align-items: center;}
 .example-tooltip-container > .example-container > .green-light {grid-area: green-light; display:flex; justify-content: center; align-items: center;}
 
-.example-tooltip-container > .example-container > .bold-1 {grid-area: bold}
-.example-tooltip-container > .example-container > .light-1 {grid-area: light}
+.example-tooltip-container > .example-container > .bold-0 {grid-area: bold}
+.example-tooltip-container > .example-container > .light-0 {grid-area: light}
 
 .example-tooltip-container > .example-container > .gray-text {grid-area: gray}
 .example-tooltip-container > .example-container > .blue-text {grid-area: blue}
 .example-tooltip-container > .example-container > .purple-text {grid-area: purple}
 .example-tooltip-container > .example-container > .green-text {grid-area: green}
 
+.example-tooltip-container > .example-container > .bold-1 {display: none}
+.example-tooltip-container > .example-container > .light-1 {display: none}
 .example-tooltip-container > .example-container > .bold-2 {display: none;}
 .example-tooltip-container > .example-container > .light-2 {display: none;}
 .example-tooltip-container > .example-container > .bold-3 {display: none;}
@@ -103,8 +109,10 @@
         ".... light4 green-light"
 
     }
-    .example-tooltip-container > .example-container > .bold-1 {grid-area: bold1}
-    .example-tooltip-container > .example-container > .light-1 {grid-area: light1}
+    .example-tooltip-container > .example-container > .bold-0 {display: none}
+    .example-tooltip-container > .example-container > .light-0 {display: none}
+    .example-tooltip-container > .example-container > .bold-1 {display: block; grid-area: bold1}
+    .example-tooltip-container > .example-container > .light-1 {display: block; grid-area: light1}
     .example-tooltip-container > .example-container > .bold-2 {display: block; grid-area: bold2;}
     .example-tooltip-container > .example-container > .light-2 {display: block; grid-area: light2;}
     .example-tooltip-container > .example-container > .bold-3 {display: block; grid-area: bold3;}
@@ -157,9 +165,36 @@
     .tooltip-text {
         font-size: 0.6rem;
     }
-
+    .example-tooltip-container > .example-container > .example{
+        margin-bottom: 4px;
+    }
 }
 
 .welcome-button-link {
     font-size: 5rem;
+}
+/* 
+@keyframes flashColors {
+    0% { background-color: #68bbdb; }
+    25% { background-color: white; }
+    50% { background-color: #68bbdb; }
+    75% { background-color: white; }
+    100% { background-color: #68bbdb; }
+} */
+
+@keyframes flashBorder {
+    0% { border-color: rgba(90, 161, 189, 0.123); }
+    25% { border-color: white; }
+    50% { border-color: rgba(90, 161, 189, 0.123); }
+    75% { border-color: white; }
+    100% { border-color: rgba(90, 161, 189, 0.123); }
+}
+
+.selected-tooltip {
+    background-color: #68bbdb;
+    color: #16212c !important;
+}
+
+.flash-border {
+    animation: flashBorder 3s linear infinite;
 }

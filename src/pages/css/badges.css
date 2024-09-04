@@ -25,6 +25,11 @@
     padding-bottom: 40px;
     border-bottom: 1px solid #d1d3d813;
 }
+.example-badge-container > .example-container > .example{
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    padding: 2px;
+}
 
 .example-badge-container > .example-container > .example,
 .example-badge-container > .example-container > .heading {
@@ -88,22 +93,28 @@
 
 .example-badge-container > .example-container > .square{grid-area: square;}
 .example-badge-container > .example-container > .pill{grid-area: pill;}
-.example-badge-container > .example-container > .squaresquare {display: none;}
-.example-badge-container > .example-container > .pillpill {display: none;}
+.example-badge-container > .example-container > .square-left {display: none;}
+.example-badge-container > .example-container > .pill-left {display: none;}
+.example-badge-container > .example-container > .square-right {display: none;}
+.example-badge-container > .example-container > .pill-right {display: none;}
 
 @media (max-width: 675px) {
     .example-badge-container > .example-container {
         padding: 0 20px 40px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-        "..... square pill pillpill squaresquare ......"
+        "..... square-left pill-left pill-right square-right ......"
         "gray gray-square gray-pill red-pill red-square red"
         "yellow yellow-square yellow-pill green-pill green-square green"
         "blue blue-square blue-pill indigo-pill indigo-square indigo"
         "purple purple-square purple-pill pink-pill pink-square pink";
     }
-    .example-badge-container > .example-container > .squaresquare {display:block; grid-area: squaresquare;}
-    .example-badge-container > .example-container > .pillpill {display: block; grid-area: pillpill;}
+    .example-badge-container > .example-container > .square {display:none}
+    .example-badge-container > .example-container > .pill {display: none}
+    .example-badge-container > .example-container > .square-left {display:block; grid-area: square-left;}
+    .example-badge-container > .example-container > .pill-left {display: block; grid-area: pill-left;}
+    .example-badge-container > .example-container > .square-right {display:block; grid-area: square-right;}
+    .example-badge-container > .example-container > .pill-right {display: block; grid-area: pill-right;}
 }
 
 @media (max-width: 475px) {
@@ -114,14 +125,36 @@
         grid-template-areas: 
         "..... ..... square pill  ......"
         "..... gray gray-square gray-pill ....."
-        "..... red red-pill red-square ....."
+        "..... red red-square red-pill ....."
         "..... yellow yellow-square yellow-pill ....." 
-        "..... green green-pill green-square ....."
+        "..... green green-square green-pill ....."
         "..... blue blue-square blue-pill ....." 
-        "..... indigo indigo-pill indigo-square ....."
+        "..... indigo indigo-square indigo-pill ....."
         "..... purple purple-square purple-pill ....."
-        "......pink pink-pill pink-square .....";
+        "......pink pink-square pink-pill .....";
     }
-    .example-badge-container > .example-container > .squaresquare {display:none;}
-    .example-badge-container > .example-container > .pillpill {display: none;}
+    .example-badge-container > .example-container > .square {display:block;}
+    .example-badge-container > .example-container > .pill {display: block;}
+    .example-badge-container > .example-container > .square-left {display:none;}
+    .example-badge-container > .example-container > .pill-left {display: none;}
+    .example-badge-container > .example-container > .square-right {display:none;}
+    .example-badge-container > .example-container > .pill-right {display: none;}
+
+}
+
+@keyframes flashBorder {
+    0% { border-color: rgba(90, 161, 189, 0.123); }
+    25% { border-color: white; }
+    50% { border-color: rgba(90, 161, 189, 0.123); }
+    75% { border-color: white; }
+    100% { border-color: rgba(90, 161, 189, 0.123); }
+}
+
+.selected-badge {
+    background-color: #68bbdb;
+    color: #16212c !important;
+}
+
+.flash-border {
+    animation: flashBorder 3s linear infinite;
 }
