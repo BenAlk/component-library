@@ -17,7 +17,7 @@
     grid-template-columns: 0.25fr repeat(9, 1fr) 0.5fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "..... ..... gray red yellow green blue indigo purple pink ....."
+    "..... ..... gray-text red-text yellow-text green-text blue-text indigo-text purple-text pink-text ....."
     "..... square gray-square red-square yellow-square green-square blue-square indigo-square purple-square pink-square ....."
     "..... pill gray-pill red-pill yellow-pill green-pill blue-pill indigo-pill purple-pill pink-pill .....";
     gap: 5px;
@@ -82,14 +82,14 @@
 
 .example-badge-container > .example-container > .pink-pill{grid-area: pink-pill;}
 
-.example-badge-container > .example-container > .gray-text{grid-area: gray;}
-.example-badge-container > .example-container > .red-text{grid-area: red;}
-.example-badge-container > .example-container > .yellow-text{grid-area: yellow;}
-.example-badge-container > .example-container > .green-text{grid-area: green;}
-.example-badge-container > .example-container > .blue-text{grid-area: blue;}
-.example-badge-container > .example-container > .indigo-text{grid-area: indigo;}
-.example-badge-container > .example-container > .purple-text{grid-area: purple;}
-.example-badge-container > .example-container > .pink-text{grid-area: pink;}
+.example-badge-container > .example-container > .gray-text{grid-area: gray-text;}
+.example-badge-container > .example-container > .red-text{grid-area: red-text;}
+.example-badge-container > .example-container > .yellow-text{grid-area: yellow-text;}
+.example-badge-container > .example-container > .green-text{grid-area: green-text;}
+.example-badge-container > .example-container > .blue-text{grid-area: blue-text;}
+.example-badge-container > .example-container > .indigo-text{grid-area: indigo-text;}
+.example-badge-container > .example-container > .purple-text{grid-area: purple-text;}
+.example-badge-container > .example-container > .pink-text{grid-area: pink-text;}
 
 .example-badge-container > .example-container > .square{grid-area: square;}
 .example-badge-container > .example-container > .pill{grid-area: pill;}
@@ -104,10 +104,10 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
         "..... square-left pill-left pill-right square-right ......"
-        "gray gray-square gray-pill red-pill red-square red"
-        "yellow yellow-square yellow-pill green-pill green-square green"
-        "blue blue-square blue-pill indigo-pill indigo-square indigo"
-        "purple purple-square purple-pill pink-pill pink-square pink";
+        "gray-text gray-square gray-pill red-pill red-square red-text"
+        "yellow-text yellow-square yellow-pill green-pill green-square green-text"
+        "blue-text blue-square blue-pill indigo-pill indigo-square indigo-text"
+        "purple-text purple-square purple-pill pink-pill pink-square pink-text";
     }
     .example-badge-container > .example-container > .square {display:none}
     .example-badge-container > .example-container > .pill {display: none}
@@ -124,14 +124,14 @@
         gap: 10px;
         grid-template-areas: 
         "..... ..... square pill  ......"
-        "..... gray gray-square gray-pill ....."
-        "..... red red-square red-pill ....."
-        "..... yellow yellow-square yellow-pill ....." 
-        "..... green green-square green-pill ....."
-        "..... blue blue-square blue-pill ....." 
-        "..... indigo indigo-square indigo-pill ....."
-        "..... purple purple-square purple-pill ....."
-        "......pink pink-square pink-pill .....";
+        "..... gray-text gray-square gray-pill ....."
+        "..... red-text red-square red-pill ....."
+        "..... yellow-text yellow-square yellow-pill ....." 
+        "..... green-text green-square green-pill ....."
+        "..... blue-text blue-square blue-pill ....." 
+        "..... indigo-text indigo-square indigo-pill ....."
+        "..... purple-text purple-square purple-pill ....."
+        "......pink-text pink-square pink-pill .....";
     }
     .example-badge-container > .example-container > .square {display:block;}
     .example-badge-container > .example-container > .pill {display: block;}
