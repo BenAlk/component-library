@@ -2,7 +2,6 @@ import React from 'react'
 import { Badge, Banner, Card, Testimonial, Toast, ToastTrigger, Tooltip } from '../component-library/ScrimbaComponents'
 import Component from "./component/display-component/display-component-index"
 import "./css/gallery.css"
-import { Link } from "react-router-dom"
 import clickTest from "./assets/click-test.png"
 export default function Gallery() {
 return (
@@ -84,6 +83,7 @@ return (
                 </Component.Head>
                 <Component.Card>
                     <Testimonial 
+                        // eslint-disable-next-line react/style-prop-object
                         style="picture"
                         person={{
                             name: "Ben Alkureishi", 
